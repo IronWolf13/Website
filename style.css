@@ -1,9 +1,9 @@
+/* Réinitialisation et styles de base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   background: #121212;
@@ -13,6 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Fond Particles.js */
 #particles-js {
   position: fixed;
   top: 0;
@@ -22,6 +23,7 @@ body {
   z-index: -1;
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -30,43 +32,38 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1000;
 }
-
 .logo {
   height: 50px;
   transition: transform 0.3s ease;
 }
-
 .logo:hover {
   transform: scale(1.1);
 }
-
 nav ul {
   list-style: none;
   display: flex;
 }
-
 nav ul li {
   margin: 0 10px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 nav ul li a:hover {
   transform: scale(1.05);
 }
-
+/* Onglet actif */
 nav ul li a.active {
   color: red;
 }
 
+/* Section Hero */
 .hero {
   height: 100vh;
   display: flex;
@@ -76,17 +73,19 @@ nav ul li a.active {
   text-align: center;
   padding: 20px;
 }
-
 .hero h2 {
   font-size: 3em;
   margin-bottom: 20px;
+  color: red;
 }
-
-.hero p {
+.tagline, .subtagline {
   font-size: 1.2em;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-
+.important {
+  color: #ff9800;
+  font-weight: bold;
+}
 .btn {
   padding: 12px 25px;
   background: #000;
@@ -95,13 +94,12 @@ nav ul li a.active {
   border-radius: 5px;
   transition: background 0.3s ease, color 0.3s ease;
 }
-
 .btn:hover {
   background: #fff;
   color: #000;
 }
 
-
+/* Sections de contenu */
 .content {
   margin: 120px auto 60px;
   padding: 40px 20px;
@@ -112,17 +110,16 @@ nav ul li a.active {
   transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
 .content h2 {
   margin-bottom: 20px;
   color: red;
 }
-
 .content p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
+/* Section Règles */
 .rules-section {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -130,29 +127,71 @@ nav ul li a.active {
   border-left: 5px solid red;
   border-radius: 5px;
 }
-
-.rules-section h3,
-.rules-section h4 {
+.rules-section h3, .rules-section h4 {
   color: red;
   margin-bottom: 10px;
 }
-
 .rules-section ul {
   list-style: disc;
   margin-left: 20px;
 }
-
 .rules-section ul li {
   margin-bottom: 8px;
 }
 
+/* Section Protocoles */
+.protocoles-section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+.protocoles-section ul li {
+  margin-bottom: 8px;
+  color: #ff9800;
+}
+
+/* Rôles */
+.roles {
+  margin-top: 30px;
+}
+.section-title {
+  border-bottom: 2px solid red;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  color: red;
+}
+.role {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid red;
+  border-radius: 5px;
+}
+.role-title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: red;
+  display: flex;
+  align-items: center;
+}
+.role-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.role-desc {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Footer */
 footer {
   padding: 20px;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   text-align: center;
   margin-top: 40px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
