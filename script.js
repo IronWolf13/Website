@@ -21,15 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const navTimeline = gsap.timeline({ repeat: -1, repeatDelay: 2 });
-  navTimeline.to(navLinks, {
-    scale: 1.2,
-    duration: 0.5,
-    ease: "power1.inOut",
-    stagger: { each: 0.5, yoyo: true, repeat: 1 }
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".content").forEach(section => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => setActiveLink(section.id),
+      onEnterBack: () => setActiveLink(section.id)
+    });
   });
 
-  gsap.registerPlugin(ScrollTrigger);
+  function setActiveLink(sectionId) {
+    navLinks.forEach(link => link.classList.remove("active"));
+    const activeLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
+    if (activeLink) activeLink.classList.add("active");
+  }
+
   gsap.utils.toArray(".content").forEach(section => {
     gsap.to(section, {
       opacity: 1,
@@ -56,14 +64,8 @@ particlesJS("particles-js", {
       type: "circle",
       stroke: { width: 0, color: "#000000" }
     },
-    opacity: {
-      value: 0.5,
-      random: false
-    },
-    size: {
-      value: 3,
-      random: true
-    },
+    opacity: { value: 0.5, random: false },
+    size: { value: 3, random: true },
     line_linked: {
       enable: true,
       distance: 150,
@@ -83,23 +85,12 @@ particlesJS("particles-js", {
   interactivity: {
     detect_on: "canvas",
     events: {
-      onhover: {
-        enable: true,
-        mode: "attract"
-      },
-      onclick: {
-        enable: true,
-        mode: "push"
-      }
+      onhover: { enable: true, mode: "attract" },
+      onclick: { enable: true, mode: "push" }
     },
     modes: {
-      attract: {
-        distance: 200,
-        duration: 0.4
-      },
-      push: {
-        particles_nb: 4
-      }
+      attract: { distance: 200, duration: 0.4 },
+      push: { particles_nb: 4 }
     }
   },
   retina_detect: true
