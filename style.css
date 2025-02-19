@@ -1,4 +1,3 @@
-/* Réinitialisation et base */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   position: relative;
 }
 
-/* Fond Particles.js en plein écran */
 #particles-js {
   position: fixed;
   top: 0;
@@ -23,23 +21,21 @@ body {
   z-index: -1;
 }
 
-/* Header fixe */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1000;
 }
 
-/* Logo discret */
 .logo {
   height: 50px;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: transform 0.3s ease;
 }
 
@@ -47,20 +43,20 @@ header {
   transform: scale(1.1);
 }
 
-/* Menu */
 nav ul {
   list-style: none;
   display: flex;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  position: relative;
   transition: color 0.3s ease;
 }
 
@@ -68,20 +64,18 @@ nav ul li a:hover {
   color: #ff9800;
 }
 
-/* Section Hero */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: transparent;
   text-align: center;
   padding: 20px;
 }
 
 .hero h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-bottom: 20px;
 }
 
@@ -91,7 +85,7 @@ nav ul li a:hover {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background: #000;
   color: #fff;
   text-decoration: none;
@@ -108,7 +102,7 @@ nav ul li a:hover {
 .content {
   margin: 120px auto 60px auto;
   padding: 40px 20px;
-  width: 80%;
+  width: 85%;
   background: rgba(30, 30, 30, 0.95);
   border-radius: 10px;
   opacity: 0; 
@@ -117,14 +111,49 @@ nav ul li a:hover {
 
 .content h2 {
   margin-bottom: 20px;
+  color: #ff9800;
 }
 
 .content p {
   line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.rules-section {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid #ff9800;
+  border-radius: 5px;
+}
+
+.rules-section h3,
+.rules-section h4 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.rules-section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.rules-section ul li {
+  margin-bottom: 8px;
 }
 
 footer {
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
 }
