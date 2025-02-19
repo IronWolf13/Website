@@ -5,46 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Professionnel Animé</title>
   <link rel="stylesheet" href="style.css">
+  <!-- GSAP & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
 
+  <!-- Fond interactif Particles.js -->
   <div id="particles-js"></div>
 
+  <!-- Header avec logo et menu animé -->
   <header>
     <img src="logo.png" alt="Logo" class="logo">
     <nav>
       <ul>
         <li><a href="#rules">Règles</a></li>
         <li><a href="#info">Infos</a></li>
-        <li><a href="#revocation">Révocations</a></li>
+        <li><a href="#revocations">Révocations</a></li>
+        <li><a href="#commandes">Commandes</a></li>
+        <li><a href="#patreon">Régle Patreon</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Section Hero -->
   <section class="hero">
     <h2>Bienvenue sur notre site</h2>
-    <p>Un design moderne et plein d'animations</p>
+    <p>Un design moderne, interactif et animé</p>
     <a href="#info" class="btn">En savoir plus</a>
   </section>
 
-  <!-- Sections de contenu -->
   <section id="rules" class="content">
-    <h2>📜 Règles</h2>
-    <p>Voici les règles à respecter sur notre plateforme. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2>Règles du Serveur</h2>
+    <p>Découvrez les règles de base et le comportement attendu sur notre serveur.</p>
   </section>
 
   <section id="info" class="content">
-    <h2>ℹ️ Infos</h2>
-    <p>Des informations importantes sur notre projet. Nulla vitae elit libero, a pharetra augue.</p>
+    <h2>Infos</h2>
+    <p>Des informations importantes sur notre projet et notre communauté.</p>
   </section>
 
-  <section id="revocation" class="content">
-    <h2>🚫 Révocations</h2>
-    <p>Ici s'affichent les éléments révoqués. Curabitur blandit tempus porttitor.</p>
+  <section id="revocations" class="content">
+    <h2>Révocations</h2>
+    <p>Liste des éléments révoqués et des mises à jour concernant notre serveur.</p>
+  </section>
+
+  <section id="commandes" class="content">
+    <h2>Commandes</h2>
+    <p>Ici, vous trouverez la liste des commandes disponibles sur le serveur.</p>
+  </section>
+
+  <section id="patreon" class="content">
+    <h2>Régle Patreon</h2>
+    <div class="rules-section">
+      <h3>Règles de base</h3>
+      <ul>
+        <li>Il est interdit de tuer gratuitement (Tuer sans raison un autre joueur, les instances de SCP-049 ne sont pas considérer comme freekill si elles se font tuer pour rien).</li>
+        <li>Il est interdit de faire du méta-gaming (Connaître une information que tu n'es pas censé savoir).</li>
+        <li>Il est interdit de camper surface pour attendre les F.I.M, U.I.U, Chaos ou Main du serpent.</li>
+        <li>Il est interdit de tirer gratuitement sur un allié.</li>
+        <li>Il est interdit de ne pas simuler la douleur (Se prendre des dégâts et ne pas faire de bruit de douleur, sauf pour les classes militaires qui doivent jouer la douleur à 15 PV ou moins).</li>
+        <li>Il est obligatoire de respecter le fait d'avoir peur des armes sauf si vous avez une arme dans les mains. (sauf pour les classes militaires ou SCP : Garde, F.I.M, UIU, Chaos, Main du serpent) (exception pour les classe-D et Concierge qui n'ont pas l'obligation de jouer la peur des armes si il a une arme dans son inventaire ou dans ses mains.)</li>
+        <li>Il est interdit de troller. (Fermer les portes au nez de ces alliés, tirer n'importe où, hurler pour rien etc.) (Les classe-D peuvent fermer les portes au nez de leurs alliés et se tuer entre eux.)</li>
+        <li>Durant le RP il est impératif d’avoir un comportement sérieux (Le HRP vocal est également compris).</li>
+        <li>Il est interdit de bunny hop (faire 3 sauts ou plus de 3 sauts rapidement).</li>
+        <li>Il est interdit de use-bug (ouvrir le confinement de SCP-079 alors que normalement c’est confiné…).</li>
+        <li>Il est obligatoire de faire 3 sommations avant de tuer une personne. (exemple : 1ère sommation, 2ème sommation etc. Sauf pour certaines exceptions comme les classe-D qui insultent un membre de la fondation, dépassent la ligne rouge entièrement ou si le classe-D tue un autre classe-D).</li>
+        <li>Il est interdit de tenir des propos déplacés (exemple : parler de religion et employer un vocabulaire comme le A-word (Allah Akbar), insultes parentales, etc.).</li>
+        <li>Il est interdit de courir si vous avez 15 PV ou moins (Sauf si vous êtes suivis par un SCP hostile ou que vous êtes une Unité tactique robotique ou un Androïde de l'Anderson robotics).</li>
+        <li>Il est interdit de s'évacuer en Chaos ou F.I.M durant le début du respawn pour ne pas jouer son rôle (Sauf si un Capitaine, Répresseur, Commando main du serpent ou Commandant UIU vous l'ordonne).</li>
+        <li>Il est interdit de déco-reco pour ne pas jouer son rôle.</li>
+        <li>Si un joueur ne respecte pas une règle du serveur, faites un ticket et n'intervenez pas sans autorisation d'un staff (exemple : si une personne parle de manière HRP, merci de le signaler et non de faire du HRP en disant "Arrête de HRP vocal !" ou autres).</li>
+        <li>Il est interdit de menotter un membre de son équipe sans raison valable.</li>
+        <li>Il est interdit de sortir son arme que ce soit un rôle militaire ou non lorsque vous êtes face au mur et qu'une personne vous pointe.</li>
+        <li>Les logiciels visant à modifier le jeu (Logiciel de triche) sont bannissables à vie.</li>
+        <li>Les parties sont RP à partir de 7 personnes.</li>
+        <li>Il est interdit de menotter les classe-D sans raison valable.</li>
+        <li>Il est interdit d'utiliser des soundboard ou voice mod. (Voice mod = modificateur de voix) (soundboard = logiciel pour mettre des sons).</li>
+        <li>Voler ses alliés est interdit. (Sauf pour les classe-D qui peuvent.)</li>
+        <li>Il est interdit de tuer un allié sans raison valable. (C.A.S.S.I.E peut tuer ses alliés si ces derniers tirent gratuitement sur la caméra sans raison valable ou s'ils tentent de la désactiver sans raison valable.) (Sauf les classe-D qui peuvent.)</li>
+        <li>Il est interdit de tuer le preneur d'otage sauf si vous avez le moyen de le prendre par derrière, s'il ne possède pas d'arme dans ses mains ou si le preneur d'otage refuse de négocier, tire directement ou si les personnes prises en otages sont des membres de la sécurité.</li>
+        <li>Il est interdit de faire du power-gaming. (Faire des actions impossibles en vrai.) (Exemple : Grimper sur les barrières, aller sur les serveurs.)</li>
+        <li>Il est interdit de gueuler dans son micro pour rien. (Exemple : saturer le micro, gueuler, etc.)</li>
+        <li>Les membres de la fondation n'ont pas le droit d'évacuer sans brèche. (Sauf si la personne qui évacue est en état d'arrestation.) (Exemple : un garde qui évacue un scientifique car il a pris SCP-127 pour rien.)</li>
+      </ul>
+    </div>
+
+    <div class="rules-section">
+      <h3>Règles générales</h3>
+
+      <h4>Règles générales humains</h4>
+      <ul>
+        <li><strong>Les membres de la fondation :</strong> Le personnel de la fondation n'a pas le droit de promener SCP-049. (Lui proposer une balade)</li>
+        <li>Les Epsilons-11 ont l'obligation de reconfiner les SCP. (Sauf : SCP-106, SCP-575, SCP-008, SCP-049-2/6 et SCP-939 que vous pouvez éliminer à vue) ; pour le reste, vous pouvez les tuer seulement si vous êtes dans l'incapacité de les reconfiner ou s'ils sont trop nombreux.</li>
+        <li>Les membres du personnel autorisés à faire des expériences doivent réaliser de vraies expériences et non des pseudo-expériences.</li>
+        <li>Les Nu-7 n'ont pas l'obligation de reconfiner les SCP sauf SCP-999.</li>
+        <li>Les F.I.M peuvent abattre un classe-D à vue s'il n'est pas menotté et en compagnie d'un membre de la sécurité.</li>
+        <li>Les membres de la fondation peuvent neutraliser les SCP s'ils le souhaitent sans obligation de reconfinement.</li>
+      </ul>
+
+      <h4>Humains</h4>
+      <ul>
+        <li>Un groupe neutre envers un autre n'a pas besoin de raison valable pour devenir hostile ; de plus, si les deux groupes le souhaitent, ils peuvent s'allier tant qu'aucune action négative n'est commise.</li>
+        <li>Si vous êtes déclaré hostile par vos alliés sans raison valable, vous pouvez agir selon votre rôle :
+          <ul>
+            <li><strong>Membres de la fondation :</strong> Déconfiner des SCP, ne pas tuer les membres non hostiles et éviter de s'allier avec des groupes hostiles.</li>
+            <li><strong>Chaos :</strong> Vous n'êtes pas obligé d'être hostile envers ceux sans arme, mais cela ne signifie pas que vous pouvez être allié.</li>
+            <li><strong>Main du serpent :</strong> Même principe que pour Chaos.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>Règles générales SCP</h4>
+      <ul>
+        <li>Les SCP inconscients et semi-conscients :
+          <ul>
+            <li>Ne savent pas esquiver ni fuir le danger (sauf SCP-939 selon certains critères et SCP-1507).</li>
+            <li>Vous ne pouvez pas camper (sauf SCP-939).</li>
+            <li>Ne peuvent pas rester à côté d'autres SCP pour profiter mutuellement (ex. : SCP-096 et SCP-173).</li>
+            <li>Aucune alliance entre SCP et humains, sauf pour les SCP conscients (sauf SCP-106, SCP-575, etc.).</li>
+            <li>Une caméra en mouvement ne signifie pas forcément la présence de SCP-079.</li>
+            <li>SCP-3114 ne peut être reconnu à la voix et demander "Tire pour voir si tu es humain !" est considéré comme du méta-gaming.</li>
+            <li>En cas de brèche, attendez au maximum 2 minutes pour vous reconfiner.</li>
+            <li>Les SCP inconscients et semi-conscients ne peuvent fermer les portes derrière eux, sauf SCP-1507.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>La Modération</h4>
+      <ul>
+        <li>Si un membre du staff vous téléporte pour une infraction, vous ne pouvez pas vous déconnecter sans autorisation, sous peine de bannissement permanent ou d'annulation d'un ticket.</li>
+        <li>Tuer une personne lors d'un tour peut entraîner une sanction allant du warn au bannissement permanent.</li>
+        <li>Prendre un objet en tour est sanctionnable ; un comportement sérieux est attendu.</li>
+        <li>Gardez votre calme lors d'un entretien avec un membre du staff.</li>
+        <li>Il est interdit de couper la parole.</li>
+        <li>Les signalements abusifs ou infondés sont sanctionnables.</li>
+        <li>Il est interdit de faire du bunny hop en tour.</li>
+        <li>En cas de ticket sans preuve vidéo, invoquer "J'ai des témoins" peut entraîner une sanction (ban permanent).</li>
+      </ul>
+
+      <h4>Règle du comité d'éthique</h4>
+      <ul>
+        <li>Il est interdit de tirer sur les portes sans raison valable (tirer pour échapper à un SCP est acceptable).</li>
+        <li>Toutes expériences doivent avoir un but précis et valable.</li>
+        <li>Il est interdit de mettre des Classe-D dans SCP-914 ou d'utiliser la machine devant eux.</li>
+        <li>Il est interdit de réaliser ou de prendre une carte O5 ou Chaos sans autorisation, sous peine d'arrestation ou d'abattage.</li>
+        <li>Il est interdit d'avoir une arme sans raison valable, selon l'avis d'un Chef garde, d'une Unité d'intervention tactique, d'un U.I.U ou d'un F.I.M.</li>
+        <li>Les membres de la fondation ne peuvent utiliser ou montrer SCP-1162 aux Classe-D.</li>
+        <li>L'utilisation des SCP (244-A, 244-B, 018) est interdite. Pour SCP (207, 714, 500, 1499, 500-A-OF, 3614-OF, ANTI-207, 119-OF, 127), une raison valable ou l'accord d'un responsable est nécessaire.</li>
+        <li>Pour SCP-330, une exception s'applique à SCP-330-ROSE et à certains cumuls interdits.</li>
+        <li>L'utilisation de SCP-330, qui peut être nocif pour la fondation, est interdite (ex. : SCP-330-ROSE, SCP-330-NOIR, SCP-330-DIABLE, SCP-330-BLEU).</li>
+        <li>Un amnésique doit être attribué près de la sortie Gate-B aux Classe-D ayant vu les capacités d’un SCP.</li>
+        <li>Il est interdit d'approcher un envoyé O5 sans autorisation.</li>
+        <li>Privilégiez le reconfinement total des SCP déconfinés.</li>
+        <li>L'utilisation du SCP-1499 est interdite hors expérience.</li>
+        <li>Il est interdit de faire des expériences sur SCP-008.</li>
+        <li>Les scientifiques doivent être accompagnés d'un garde ou de plusieurs pour les expériences.</li>
+        <li>Les boissons du SCP-294 modifiant la voix sont interdites.</li>
+        <li>Il est strictement interdit d'interagir avec SCP-2536 et SCP-559. [Noël]</li>
+      </ul>
+
+      <h4>Règles rôles</h4>
+      <ul>
+        <li><strong>Hiérarchie fondation :</strong> Classe-D &lt; Concierge &lt; C.A.S.S.I.E &lt; Médecin &lt; Scientifique &lt; Ingénieur &lt; Garde de la zone carcérale/Garde &lt; Agent d'intervention tactique &lt; Chef DI&ST &lt; Scientifique superviseur &lt; Unité tactique robotique &lt; Chef garde &lt; Unité d'intervention tactique &lt; Soldat N.T.F/Soldat Nu-7/Agent U.I.U/Soldat lourd U.I.U &lt; Spécialiste N.T.F/Mastodonte Nu-7/Bombardier Nu-7 &lt; Sergent N.T.F &lt; Lieutenant Nu-7 &lt; Commandant U.I.U/Capitaine N.T.F/Capitaine Nu-7/Directeur &lt; Soldat Omega-1/Soldat Alpha-1 &lt; Caporal Alpha-1/Colonel Alpha-1 &lt; Comité d'éthique &lt; Envoyé O5</li>
+        <li><strong>Hiérarchie fondation brèche :</strong> Classe-D &lt; Concierge &lt; Médecin &lt; Scientifique &lt; Ingénieur &lt; Chef DI&ST &lt; Scientifique superviseur &lt; Directeur &lt; C.A.S.S.I.E &lt; Garde de la zone carcérale/Garde &lt; Agent d'intervention tactique &lt; Unité tactique robotique &lt; Chef garde &lt; Unité d'intervention tactique &lt; Soldat N.T.F/Soldat Nu-7/Agent U.I.U/Soldat lourd U.I.U &lt; Spécialiste N.T.F/Mastodonte Nu-7/Bombardier Nu-7 &lt; Sergent N.T.F &lt; Lieutenant Nu-7 &lt; Commandant U.I.U/Capitaine N.T.F/Capitaine Nu-7 &lt; Soldat Omega-1/Soldat Alpha-1 &lt; Caporal Alpha-1/Colonel Alpha-1 &lt; Comité d'éthique &lt; Envoyé O5</li>
+        <li><strong>Hiérarchie chaos :</strong> Chaos conscrit &lt; Chaos espion &lt; Android de l'Anderson robotics &lt; Chaos fusiller &lt; Chaos infiltré &lt; Chaos maraudeur &lt; Chaos répresseur &lt; Chef chaos</li>
+        <li><strong>Hiérarchie main du serpent :</strong> Soldat main du serpent &lt; Spécialiste main du serpent &lt; Commando main du serpent</li>
+        <li><strong>Hiérarchie GRU-P :</strong> Soldat GRU-P &lt; Major GRU-P</li>
+      </ul>
+    </div>
   </section>
 
   <footer>
