@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Animation d'entrée pour la section Hero
   gsap.from(".hero h2", { opacity: 0, y: -50, duration: 1 });
   gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
   gsap.from(".btn", { opacity: 0, scale: 0.5, duration: 1, delay: 1 });
 
+  // Défilement fluide lors du clic sur les onglets
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Effets de survol sur les onglets
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -21,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Utilisation de ScrollTrigger pour mettre à jour l'onglet actif
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".content").forEach(section => {
     ScrollTrigger.create({
@@ -38,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (activeLink) activeLink.classList.add("active");
   }
 
+  // Animation des sections au scroll
   gsap.utils.toArray(".content").forEach(section => {
     gsap.to(section, {
       opacity: 1,
@@ -53,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Configuration de Particles.js avec interactivité suivant le curseur
 particlesJS("particles-js", {
   particles: {
     number: {
