@@ -12,12 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const navLinks = document.querySelectorAll("nav ul li a");
-  const navTimeline = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+  navLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      gsap.to(link, { scale: 1.1, duration: 0.3 });
+    });
+    link.addEventListener("mouseleave", () => {
+      gsap.to(link, { scale: 1, duration: 0.3 });
+    });
+  });
+
+  const navTimeline = gsap.timeline({ repeat: -1, repeatDelay: 2 });
   navTimeline.to(navLinks, {
     scale: 1.2,
     duration: 0.5,
     ease: "power1.inOut",
-    stagger: { each: 0.8, yoyo: true, repeat: 1 }
+    stagger: { each: 0.5, yoyo: true, repeat: 1 }
   });
 
   gsap.registerPlugin(ScrollTrigger);
