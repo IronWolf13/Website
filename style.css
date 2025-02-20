@@ -186,15 +186,13 @@ nav ul li a:hover::after {
 /* Section #info - style général */
 .info-section {
   position: relative;
-  background: rgba(0, 0, 0, 0.7);
 }
 
-/* Conteneur qui scrolle horizontalement */
 .info-hscroll {
-  display: flex;          /* Aligne les cartes sur une ligne */
-  gap: 20px;              /* Espace entre chaque carte */
-  overflow-x: auto;       /* Scroll horizontal si les cartes débordent */
-  padding-bottom: 10px;   /* Petite marge pour éviter que la barre de scroll
+  display: flex;        
+  gap: 20px;           
+  overflow-x: auto;      
+  padding-bottom: 10px;  
 
 }
 
@@ -213,7 +211,6 @@ nav ul li a:hover::after {
   transform: scale(1.02);
 }
 
-/* L'image (à gauche) */
 .info-img {
   width: 150px;
   height: auto;
@@ -223,9 +220,9 @@ nav ul li a:hover::after {
   object-fit: contain;
 }
 
-/* Le texte (à droite) */
+
 .info-text {
-  flex: 1; /* Le texte occupe le reste de l'espace dans la carte */
+  flex: 1;
   color: #fff;
 }
 
