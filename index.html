@@ -7,9 +7,10 @@
   <!-- Police Google (Roboto) -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- GSAP & ScrollTrigger -->
+  <!-- GSAP, ScrollTrigger et ScrollToPlugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <!-- Script personnalisé -->
@@ -34,8 +35,8 @@
     </nav>
   </header>
 
-  <!-- Section Accueil (Hero) -->
-  <section id="hero" class="hero">
+  <!-- Section Accueil (Hero) - Ajout de la classe "content" pour ScrollTrigger -->
+  <section id="hero" class="hero content">
     <h2>Bienvenue sur Oméga Facility</h2>
     <p class="tagline">
       Ce site internet est dédié au <span class="important">règlement</span> et aux <span class="important">révocations de sanction</span> de Oméga Facility.
@@ -97,11 +98,16 @@
     </div>
   </section>
 
-  <!-- Section Infos -->
+  <!-- Section Infos avec galerie d'images -->
   <section id="info" class="content">
     <h2>Informations</h2>
     <p>Serveur RolePlay moddé sur SCP : SL créé par <span class="important">Le dompteur de raptor</span> et <span class="important">MrPancake</span>.</p>
-    <!-- (Ici, vous pouvez ajouter des images ou icônes associées aux rôles si besoin) -->
+    <div class="character-gallery">
+      <img src="character1.png" alt="Personnage 1">
+      <img src="character2.png" alt="Personnage 2">
+      <img src="character3.png" alt="Personnage 3">
+      <!-- Ajoutez d'autres images selon vos besoins -->
+    </div>
   </section>
 
   <!-- Section Commandes -->
@@ -118,26 +124,26 @@
         <li>Si vous êtes un <strong class="important">humain</strong>, faites <span class="important">.activate</span> pour activer le femur breaker.</li>
         <li>Si vous êtes un <strong class="important">concierge</strong> et <strong class="important">chef DI&amp;ST</strong> :
           <ul>
-            <li>Faites <span class="important">.clean</span> pour nettoyer le corps le plus près de vous.</li>
+            <li>Faites <span class="important">.clean</span> pour nettoyer le corps le plus proche.</li>
             <li>Faites <span class="important">.iclean</span> pour supprimer l'objet que vous visez.</li>
           </ul>
         </li>
         <li>Si vous êtes un <strong class="important">humain</strong> :
           <ul>
-            <li>Faites <span class="important">.294 [nom de la boisson]</span> (ex. : <span class="important">.294 water</span>) avec une pièce de monnaie dans la main devant le SCP pour obtenir une boisson (plus de 100 commandes disponibles).</li>
-            <li>Faites <span class="important">.punch</span> pour frapper de façon RP les autres joueurs (<em>respecter le FearRP</em>).</li>
+            <li>Faites <span class="important">.294 [nom de la boisson]</span> (ex. : <span class="important">.294 water</span>) avec une pièce dans la main devant le SCP pour obtenir votre boisson (plus de 100 commandes disponibles).</li>
+            <li>Faites <span class="important">.punch</span> pour frapper de façon RP les autres joueurs (<em>respectez le FearRP</em>).</li>
             <li>Faites <span class="important">.push</span> pour pousser de façon RP les autres joueurs.</li>
-            <li>Faites <span class="important">.steal</span> pour tenter de voler un objet dans l'inventaire d'un autre joueur (<em>à vos risques et périls</em>).</li>
-            <li>Faites <span class="important">.cuff</span> avec une arme dans la main pour menotter un joueur de votre team.</li>
+            <li>Faites <span class="important">.steal</span> pour tenter de voler un objet dans l'inventaire d'un autre joueur (<em>à vos risques</em>).</li>
+            <li>Faites <span class="important">.cuff</span> avec une arme pour menotter un joueur de votre équipe.</li>
             <li>Faites <span class="important">.heal</span> sur un SCP avec un objet destiné à soigner.</li>
           </ul>
         </li>
         <li>Si vous êtes <strong class="important">SCP‑079</strong> :
           <ul>
             <li>Faites <span class="important">.simulate [ci/mtf/recont]</span> pour envoyer un faux message via C.A.S.S.I.E.</li>
-            <li>Faites <span class="important">.find [id joueur/nom joueur]</span> pour vous téléporter automatiquement dans la même salle que la cible.</li>
-            <li>Faites <span class="important">.overload</span> pour désactiver les générateurs en cours d'activation.</li>
-            <li>Faites <span class="important">.overcharge [1-60]</span> pour désactiver les lumières de tout le site pendant un temps donné (maximum 60 secondes).</li>
+            <li>Faites <span class="important">.find [id joueur/nom joueur]</span> pour vous téléporter dans la même salle que la cible.</li>
+            <li>Faites <span class="important">.overload</span> pour désactiver les générateurs en activation.</li>
+            <li>Faites <span class="important">.overcharge [1-60]</span> pour éteindre les lumières du site pendant un temps donné (max 60 sec).</li>
             <li>Faites <span class="important">.gaz</span> pour activer le système de gaz dans une salle.</li>
             <li>Faites <span class="important">.flash</span> pour flasher avec la caméra les personnes qui vous regardent.</li>
           </ul>
@@ -147,9 +153,9 @@
             <li>Faites <span class="important">.conf</span> pour vous reconfiner en SCP.</li>
           </ul>
         </li>
-        <li>Si vous êtes <strong class="important">SCP‑049</strong>, appuyez sur la touche [ALT] pour activer le chat de proximité et parler aux humains.</li>
-        <li>Si vous êtes <strong class="important">SCP‑999</strong>, appuyez sur la touche [ALT] pour activer votre capacité de soins.</li>
-        <li>Si vous êtes <strong class="important">SCP‑575</strong>, appuyez sur la touche [ALT] pour activer votre capacité et éteindre toutes les lumières de la fondation.</li>
+        <li>Si vous êtes <strong class="important">SCP‑049</strong>, appuyez sur [ALT] pour activer le chat de proximité et parler aux humains.</li>
+        <li>Si vous êtes <strong class="important">SCP‑999</strong>, appuyez sur [ALT] pour activer votre capacité de soins.</li>
+        <li>Si vous êtes <strong class="important">SCP‑575</strong>, appuyez sur [ALT] pour activer votre capacité et éteindre toutes les lumières.</li>
       </ul>
     </div>
   </section>
@@ -159,8 +165,8 @@
     <h2>Révocations</h2>
     <p>
       Cette page est dédiée aux demandes de révocation de sanction (warn, ban temporaire ou ban permanent).<br>
-      Pour toute demande de révocation, veuillez remplir le questionnaire suivant : <a href="https://form.jotform.com/240366450124347" target="_blank" class="link">https://form.jotform.com/240366450124347</a>.<br>
-      Si vous êtes sanctionné(e) de façon injuste, votre sanction pourra être retirée. Si elle est justifiée, ne tentez pas de demander une révocation.
+      Pour toute demande, veuillez remplir le questionnaire suivant : <a href="https://form.jotform.com/240366450124347" target="_blank" class="link">https://form.jotform.com/240366450124347</a>.<br>
+      Si vous êtes sanctionné(e) de façon injuste, votre sanction pourra être retirée. Sinon, ne tentez pas de demander une révocation.
     </p>
   </section>
 
