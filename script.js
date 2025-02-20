@@ -1,30 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Animation d'entrée pour la section Hero
-  gsap.from(".hero h2", { opacity: 0, y: -50, duration: 1 });
-  gsap.from(".hero p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
-  gsap.from(".btn", { opacity: 0, scale: 0.5, duration: 1, delay: 1 });
+  // Animations d'entrée plus rapides pour la section Hero
+  gsap.from(".hero h2", { opacity: 0, y: -50, duration: 0.7 });
+  gsap.from(".hero p", { opacity: 0, y: 50, duration: 0.7, delay: 0.3 });
+  gsap.from(".btn", { opacity: 0, scale: 0.5, duration: 0.7, delay: 0.5 });
 
-  // Défilement fluide lors du clic sur les onglets
+  // Défilement fluide pour tous les liens du menu
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const target = document.querySelector(e.target.getAttribute("href"));
-      gsap.to(window, { duration: 1, scrollTo: target });
+      gsap.to(window, { duration: 0.7, scrollTo: target });
     });
   });
 
-  // Effets de survol sur les onglets
+  // Effet de survol sur les onglets
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
-      gsap.to(link, { scale: 1.1, duration: 0.3 });
+      gsap.to(link, { scale: 1.1, duration: 0.2 });
     });
     link.addEventListener("mouseleave", () => {
-      gsap.to(link, { scale: 1, duration: 0.3 });
+      gsap.to(link, { scale: 1, duration: 0.2 });
     });
   });
 
-  // Utilisation de ScrollTrigger pour mettre à jour l'onglet actif
+  // Mise à jour de l'onglet actif avec ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".content").forEach(section => {
     ScrollTrigger.create({
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
       onEnterBack: () => setActiveLink(section.id)
     });
   });
-
   function setActiveLink(sectionId) {
     navLinks.forEach(link => link.classList.remove("active"));
     const activeLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(section, {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 0.7,
       ease: "power2.out",
       scrollTrigger: {
         trigger: section,
@@ -58,46 +57,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Configuration de Particles.js avec interactivité suivant le curseur
+// Configuration Particles.js avec mode "bubble" pour interagir avec le curseur
 particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 100,
-      density: { enable: true, value_area: 800 }
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": { "enable": true, "value_area": 800 }
     },
-    color: { value: "#ffffff" },
-    shape: {
-      type: "circle",
-      stroke: { width: 0, color: "#000000" }
+    "color": { "value": "#ff0000" },
+    "shape": {
+      "type": "circle"
     },
-    opacity: { value: 0.5, random: false },
-    size: { value: 3, random: true },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.4,
-      width: 1
+    "opacity": {
+      "value": 0.5
     },
-    move: {
-      enable: true,
-      speed: 2,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out"
+    "size": {
+      "value": 3,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ff0000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out"
     }
   },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: { enable: true, mode: "attract" },
-      onclick: { enable: true, mode: "push" }
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "bubble" },
+      "onclick": { "enable": true, "mode": "push" },
+      "resize": true
     },
-    modes: {
-      attract: { distance: 200, duration: 0.4 },
-      push: { particles_nb: 4 }
+    "modes": {
+      "bubble": {
+        "distance": 250,
+        "size": 4,
+        "duration": 2,
+        "opacity": 1,
+        "speed": 3
+      },
+      "push": {
+        "particles_nb": 4
+      }
     }
   },
-  retina_detect: true
+  "retina_detect": true
 });
