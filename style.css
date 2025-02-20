@@ -23,7 +23,7 @@ body {
   z-index: -1;
 }
 
-/* Header */
+/* Header transparent */
 header {
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.85);
+  background: transparent;
   z-index: 1000;
 }
 .logo {
@@ -42,6 +42,8 @@ header {
 .logo:hover {
   transform: scale(1.1);
 }
+
+/* Menu avec animation de trait sous le texte */
 nav ul {
   list-style: none;
   display: flex;
@@ -50,20 +52,35 @@ nav ul li {
   margin: 0 10px;
 }
 nav ul li a {
+  position: relative;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: color 0.3s ease, transform 0.3s ease;
+  padding: 5px 0;
 }
 nav ul li a:hover {
   transform: scale(1.05);
 }
-/* Onglet actif */
 nav ul li a.active {
   color: red;
 }
+/* Trait animé sous les onglets */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background: red;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
 
-/* Section Hero (Accueil) */
+/* Section Accueil (Hero) */
 .hero {
   height: 100vh;
   display: flex;
@@ -154,7 +171,7 @@ nav ul li a.active {
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(255,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
 }
 .commandes-section .section-subtitle {
   font-size: 1.1em;
