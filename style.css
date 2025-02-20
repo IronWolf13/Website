@@ -184,50 +184,63 @@ nav ul li a:hover::after {
   margin-bottom: 8px;
 }
 
-/* Section Informations (fond noir, texte blanc) */
+/* Section #info - On peut limiter sa hauteur et activer un scroll vertical */
 .info-section {
-  background: #000;       /* Fond noir, si vous voulez voir les particules derrière, mettez du semi-transparent ou transparent */
-  padding: 20px;
-  color: #fff;
+  /* Fond, marge, etc. selon vos besoins */
+  position: relative;
+  /* height: 600px;  <-- Si vous voulez TOUTE la section scrollable,
+                          décommentez et ajustez la hauteur */
 }
 
-/* Carte d'information : image + description */
+/* Conteneur des cartes - c’est ici qu’on peut mettre un scroll vertical */
+.cards-container {
+  max-height: 600px;      /* Limite la hauteur du conteneur */
+  overflow-y: auto;       /* Scroll vertical si le contenu dépasse 600px */
+  padding-right: 10px;    /* Petite marge pour éviter que le scroll barre
+                             ne chevauche le texte */
+}
+
+/* Carte d'information */
 .info-card {
   display: flex;
-  align-items: flex-start; /* aligne le texte et l'image en haut */
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid orange;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
+.info-card:hover {
+  transform: scale(1.02);
+}
+
+/* Image - on veille à garder les proportions */
 .info-img {
-  width: 250px;           /* Taille de l'image, ajustez selon vos besoins */
-  object-fit: cover;
-  border: 2px solid orange;   /* Bordure de couleur orange */
+  width: 250px;           /* Largeur fixe ou ajustable */
+  height: auto;           /* Pour conserver les proportions */
+  object-fit: contain;    /* Montre l’image en entier sans la rogner */
+  border: 2px solid orange;
   border-radius: 5px;
 }
 
+/* Zone de description */
 .info-details {
-  max-width: 600px;       /* Limite la largeur du texte, ajustez à votre convenance */
+  max-width: 350px;       /* Ajustez selon la place disponible */
 }
 
 .role-title {
   color: orange;
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .role-description {
   font-size: 1em;
   line-height: 1.5;
-}
-
-/* Classes utilitaires pour mettre en valeur certains mots */
-.highlight {
-  color: orange;
-}
-
-.red {
-  color: red;
+  color: #fff;            /* Texte en blanc */
 }
 
 
