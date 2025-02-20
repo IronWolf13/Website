@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oméga Facility – Règlement & Révocations</title>
-  <!-- Police Google (Roboto) pour une typographie moderne -->
+  <title>Oméga Facility – Règlement & Protocoles</title>
+  <!-- Police Google (Roboto) -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!-- GSAP & ScrollTrigger -->
@@ -24,26 +24,31 @@
     <img src="logo.png" alt="Logo Oméga Facility" class="logo">
     <nav>
       <ul>
-        <li><a href="#rules">Règles</a></li>
-        <li><a href="#info">Infos</a></li>
-        <li><a href="#revocations">Révocations</a></li>
-        <li><a href="#commandes">Commandes</a></li>
+        <li><a href="#hero" class="active">Accueil</a></li>
+        <li><a href="#rules">Règlement</a></li>
         <li><a href="#protocoles">Protocoles</a></li>
+        <li><a href="#info">Infos</a></li>
+        <li><a href="#commandes">Commandes</a></li>
+        <li><a href="#revocations">Révocations</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Section Hero -->
-  <section class="hero">
+  <!-- Section Accueil (Hero) -->
+  <section id="hero" class="hero">
     <h2>Bienvenue sur Oméga Facility</h2>
-    <p class="tagline">Ce site internet est dédié au <span class="important">règlement</span> et aux <span class="important">révocations de sanction</span> de Oméga Facility.</p>
-    <p class="subtagline">Serveur RolePlay moddé sur SCP : SL créé par <span class="important">Le dompteur de raptor</span> et <span class="important">MrPancake</span>.</p>
-    <a href="#info" class="btn">En savoir plus</a>
+    <p class="tagline">
+      Ce site internet est dédié au <span class="important">règlement</span> et aux <span class="important">révocations de sanction</span> de Oméga Facility.
+    </p>
+    <p class="subtagline">
+      Serveur RolePlay moddé sur SCP : SL créé par <span class="important">Le dompteur de raptor</span> et <span class="important">MrPancake</span>.
+    </p>
+    <a href="#rules" class="btn">En savoir plus</a>
   </section>
 
-  <!-- Section Règles -->
+  <!-- Section Règlement -->
   <section id="rules" class="content">
-    <h2>Règles du Serveur</h2>
+    <h2>Règlement du Serveur</h2>
     <div class="rules-section">
       <h3>Règles de base</h3>
       <ul>
@@ -64,7 +69,7 @@
         <li>Il est <strong class="important">interdit de déco‑reco</strong> pour éviter de jouer son rôle.</li>
         <li>En cas d'infraction, <strong class="important">faites un ticket</strong> et n'intervenez pas sans l'autorisation d'un staff.</li>
         <li>Il est <strong class="important">interdit de menotter</strong> un membre de son équipe sans raison valable.</li>
-        <li>Il est <strong class="important">interdit de dégainer son arme</strong> dans certaines situations (face à un mur et quand une personne vous pointe l'arme).</li>
+        <li>Il est <strong class="important">interdit de dégainer son arme</strong> dans certaines situations (face à un mur et lorsqu'une personne vous pointe l'arme).</li>
         <li>Les logiciels de triche sont <strong class="important">bannissables à vie</strong>.</li>
         <li>Les parties sont RP à partir de <strong class="important">7 personnes</strong>.</li>
         <li>Il est <strong class="important">interdit de menotter</strong> les <span class="role-term">Classe‑D</span> sans raison valable.</li>
@@ -79,372 +84,6 @@
     </div>
   </section>
 
-  <!-- Section Infos -->
-  <section id="info" class="content">
-    <h2>Informations</h2>
-    <p>Serveur RolePlay moddé sur SCP : SL créé par <span class="important">Le dompteur de raptor</span> et <span class="important">MrPancake</span>.</p>
-    <!-- Sous-section Rôles -->
-    <div class="roles">
-      <h3 class="section-title">Rôles</h3>
-      
-      <!-- Exemple pour Classe‑D (avec icône) -->
-      <div class="role">
-        <h4 class="role-title">
-          <img src="classed.png" alt="Icône Classe‑D" class="role-icon"> Classe‑D
-        </h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Classe‑D</strong>, votre objectif est de <span class="important">vous échapper</span> de la fondation par n'importe quel moyen !<br>
-          Vous ne connaissez rien de la fondation et ne savez pas ce qu'est un SCP.
-        </p>
-      </div>
-
-      <!-- Rôle : Concierge -->
-      <div class="role">
-        <h4 class="role-title">Concierge</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Concierge</strong>, un ancien <span class="role-term">Classe‑D</span> converti suite à votre bon comportement. Votre objectif est de nettoyer la fondation et d'évacuer en cas de brèche !<br>
-          Vous ne connaissez rien de la fondation et ne savez pas ce qu'est un SCP.<br>
-          Vous faites confiance aux membres de la fondation, mais si vous êtes menacé sans raison, vous pouvez prendre les armes.
-        </p>
-      </div>
-
-      <!-- Rôle : Médecin -->
-      <div class="role">
-        <h4 class="role-title">Médecin</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Médecin</strong>, votre objectif est de soigner le personnel du site et d'évacuer en cas de brèche !<br>
-          Vous connaissez peu de choses sur la fondation (vous ne connaissez que les SCP <em>vivants</em> et non les objets SCP).<br>
-          Vous connaissez les alliés et ennemis de la fondation et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Scientifique -->
-      <div class="role">
-        <h4 class="role-title">Scientifique</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Scientifique</strong>, votre objectif est de mener des expériences et d'évacuer en cas de brèche !<br>
-          Vous connaissez la fondation et tous les SCP, ainsi que les alliés et ennemis. Vous êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Scientifique superviseur -->
-      <div class="role">
-        <h4 class="role-title">Scientifique superviseur</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Scientifique superviseur</strong>, vous dirigez le département scientifique et menez des expériences, tout en devant évacuer en cas de brèche.<br>
-          Vous connaissez la fondation, tous les SCP et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Directeur -->
-      <div class="role">
-        <h4 class="role-title">Directeur</h4>
-        <p class="role-desc">
-          Vous êtes le <strong class="important">Directeur</strong>, chargé de diriger le site et d'assurer son bon fonctionnement, tout en évacuant en cas de brèche.<br>
-          Vous connaissez la fondation, tous les SCP et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Ingénieur -->
-      <div class="role">
-        <h4 class="role-title">Ingénieur</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Ingénieur</strong>, votre mission est de réparer et d'évacuer en cas de brèche !<br>
-          Vous connaissez la fondation et les SCP contenus dans le site Oméga, ainsi que les alliés et ennemis. Vous êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Chef DI&ST -->
-      <div class="role">
-        <h4 class="role-title">Chef DI&amp;ST</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Chef DI&amp;ST</strong>, responsable de la propreté et de l'ingénierie, et devez évacuer en cas de brèche.<br>
-          Vous connaissez la fondation, les SCP du site Oméga, les alliés et ennemis, et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Garde -->
-      <div class="role">
-        <h4 class="role-title">Garde</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Garde</strong>, chargé de surveiller les <span class="role-term">Classe‑D</span> et de veiller au bon déroulement des expériences.<br>
-          En cas de brèche, vous devez évacuer le personnel non militaire et assister les F.I.M et U.I.U.<br>
-          Vous connaissez la fondation, les SCP du site Oméga, et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Chef garde -->
-      <div class="role">
-        <h4 class="role-title">Chef garde</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Chef garde</strong>, responsable de la surveillance des <span class="role-term">Classe‑D</span> et de la sécurité du site.<br>
-          Vous connaissez la fondation, les SCP d'Oméga, les alliés et ennemis, et êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Chaos infiltré -->
-      <div class="role">
-        <h4 class="role-title">Chaos infiltré</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Chaos infiltré</strong>, chargé de voler les objets SCP et de faire sortir les <span class="role-term">Classe‑D</span>.<br>
-          Vous connaissez la fondation et tous les SCP. Vous ne pouvez déconfiner les SCP qu'après 20 minutes sans expérience, et ne devez pas tuer sans être repéré.
-        </p>
-      </div>
-
-      <!-- Rôle : Unité d'intervention tactique -->
-      <div class="role">
-        <h4 class="role-title">Unité d'intervention tactique</h4>
-        <p class="role-desc">
-          Vous êtes l'<strong class="important">Unité d'intervention tactique</strong>, chargée de protéger le site contre toute invasion ennemie.<br>
-          Vous connaissez la fondation et tous les SCP, suivez la hiérarchie et restez <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Unité tactique robotique -->
-      <div class="role">
-        <h4 class="role-title">Unité tactique robotique</h4>
-        <p class="role-desc">
-          Vous êtes une <strong class="important">Unité tactique robotique</strong>, dont l'objectif est d'assister et de protéger le personnel.<br>
-          Vous connaissez la fondation et les SCP, vous ne devez pas insulter et suivre la hiérarchie. Vous êtes <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : U.I.U -->
-      <div class="role">
-        <h4 class="role-title">U.I.U</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">U.I.U</strong>, chargé d'aider les F.I.M dans leurs missions et d'enquêter sur la brèche de confinement.<br>
-          Vous connaissez la fondation et tous les SCP, suivez la hiérarchie et restez <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : F.I.M -->
-      <div class="role">
-        <h4 class="role-title">F.I.M</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">F.I.M</strong>, responsable de reconfiner les SCP ou, si nécessaire, de les détruire, d'évacuer le personnel et d'éliminer ou capturer les intrus.<br>
-          Vous connaissez la fondation et tous les SCP, suivez la hiérarchie et restez <strong class="important">neutre envers la GRU‑P</strong>.
-        </p>
-      </div>
-
-      <!-- Rôle : Chaos -->
-      <div class="role">
-        <h4 class="role-title">Chaos</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Chaos</strong>, votre mission est de semer le désordre dans la fondation en volant les objets SCP, en faisant sortir les <span class="role-term">Classe‑D</span> et en capturant ou tuant les membres hostiles.<br>
-          Vous devez suivre la hiérarchie des Chaos et connaître vos ennemis.
-        </p>
-      </div>
-
-      <!-- Rôle : Androïde de l'Anderson robotics -->
-      <div class="role">
-        <h4 class="role-title">Androïde de l'Anderson robotics</h4>
-        <p class="role-desc">
-          Vous êtes un <strong class="important">Androïde de l'Anderson robotics</strong>, dont l'objectif est de semer le chaos dans la fondation en volant les objets SCP et en faisant sortir les <span class="role-term">Classe‑D</span>.<br>
-          Suivez la hiérarchie des Chaos et connaissez vos ennemis.
-        </p>
-      </div>
-
-      <!-- Rôle : Chaos espion -->
-      <div class="role">
-        <h4 class="role-title">Chaos espion</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">Chaos espion</strong>, chargé de libérer les <span class="role-term">Classe‑D</span> et de voler les objets SCP sans être détecté.<br>
-          Vous devez suivre la hiérarchie des Chaos, connaître vos ennemis et ne pas déconfiner de SCP jouables sans brèche.
-        </p>
-      </div>
-
-      <!-- Rôle : GRU-P -->
-      <div class="role">
-        <h4 class="role-title">GRU-P</h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">GRU-P</strong>, votre objectif est de voler tous les objets SCP pour la <span class="important">RUSSIE</span> !<br>
-          Vous connaissez la fondation, suivez la hiérarchie des GRU‑P, connaissez vos ennemis et restez <strong class="important">neutre</strong> envers la fondation et les U.I.U.
-        </p>
-      </div>
-
-      <!-- Rôle : Main du serpent -->
-      <div class="role">
-        <h4 class="role-title">Main du serpent</h4>
-        <p class="role-desc">
-          Vous êtes membre de la <strong class="important">Main du serpent</strong>, allié des SCP – personne ne peut vous tuer !<br>
-          Vous connaissez la fondation, tous les SCP et devez suivre la hiérarchie de la Main du serpent. Vous connaissez vos ennemis (vous devez tuer tout le monde ou prendre des otages).
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-049 -->
-      <div class="role">
-        <h4 class="role-title">SCP-049 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-049</strong>, un médecin de la peste agressif. Votre mission est de soigner ceux que vous jugez nécessaires, tout en respectant votre contrat.<br>
-          Vous ne connaissez rien de la fondation.<br>
-          <span class="important">Attention :</span> les interactions vocales RP sont obligatoires avant de procéder aux soins (tuer).<br>
-          Vous ne pouvez pas donner d'ordres à vos instances via le chat SCP et ne devez pas réanimer une unité tactique robotique ou un androïde.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-049-2 -->
-      <div class="role">
-        <h4 class="role-title">SCP-049-2 <span class="role-status">[ SEMI‑CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-049‑2</strong>, vous vous promenez pacifiquement dans la fondation et aimez rester près du docteur !<br>
-          Vous ne connaissez rien de la fondation et êtes pacifique sauf en cas de provocation ou sur ordre de SCP‑049.<br>
-          Vous n'êtes pas obligé de suivre SCP‑049 et ne pouvez pas apprendre à esquiver ou tendre des pièges.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-079 -->
-      <div class="role">
-        <h4 class="role-title">SCP-079 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-079</strong>, une intelligence artificielle capable d'accéder à toutes les informations.<br>
-          Vous connaissez la fondation à 100% mais n'êtes pas obligé d'être hostile.<br>
-          <span class="important">Important :</span> vous ne devez pas diffuser d'informations ni pinguer dans le chat SCP.
-        </p>
-      </div>
-
-      <!-- Rôle : C.A.S.S.I.E -->
-      <div class="role">
-        <h4 class="role-title">C.A.S.S.I.E <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">C.A.S.S.I.E</strong>, l'intelligence artificielle du site, destinée à assister les membres de la fondation.<br>
-          Vous connaissez la fondation à 100% et devez vous exprimer sans insultes.<br>
-          Vous n'êtes pas autorisé à aider les SCP ni à diffuser d'informations dans le chat SCP.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-096 -->
-      <div class="role">
-        <h4 class="role-title">SCP-096 <span class="role-status">[ INCONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-096</strong>, une entité timide qui craint le regard des autres.<br>
-          Vous ne connaissez rien de la fondation SCP et êtes pacifique sauf si on vous regarde directement.<br>
-          <span class="important">Note :</span> Si trois personnes vous capturent sans objet en main ou si quelqu'un s'échappe après vous avoir regardé, vous devez agir.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-106 -->
-      <div class="role">
-        <h4 class="role-title">SCP-106 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-106</strong>, dont le but est de torturer toute personne en vue.<br>
-          Vous ne connaissez rien de la fondation et ne pouvez vous allier aux humains, sauf si cela amplifie leur souffrance.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-173 -->
-      <div class="role">
-        <h4 class="role-title">SCP-173 <span class="role-status">[ INCONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-173</strong>, une statue capable de se déplacer dans la fondation.<br>
-          Vous ne connaissez rien de la fondation, ne pouvez pas fouiller et êtes doté d'une mémoire de 5 secondes.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-939 -->
-      <div class="role">
-        <h4 class="role-title">SCP-939 <span class="role-status">[ SEMI‑CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-939</strong>, une entité aveugle qui se repère grâce aux sons.<br>
-          Votre unique objectif est de chasser et de survivre ; vous ne pouvez tuer que ceux qui font du bruit et vous fuyez en cas de faiblesse.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-999 -->
-      <div class="role">
-        <h4 class="role-title">SCP-999 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-999</strong>, aimant la compagnie et le soin des autres.<br>
-          Vous ne connaissez pas la fondation SCP et devez suivre les bonbons si vous en voyez.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-575 -->
-      <div class="role">
-        <h4 class="role-title">SCP-575 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-575</strong>, une ombre de matière qui apparaît dans l'obscurité pour tuer ses proies.<br>
-          Vous ne connaissez rien de la fondation et devez éliminer tout le monde (sauf pour la Main du serpent).
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-008 -->
-      <div class="role">
-        <h4 class="role-title">SCP-008 <span class="role-status">[ INCONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-008</strong>, un virus dangereux capable d'infecter les personnes.<br>
-          Vous ne connaissez rien de la fondation et ne devez pas rester avec SCP‑049.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-035 -->
-      <div class="role">
-        <h4 class="role-title">SCP-035 <span class="role-status">[ CONSCIENT ]</span></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-035</strong>, un masque capable de prendre le corps d'un humain.<br>
-          Vous connaissez la fondation et les SCP du site Oméga et devez avoir une interaction vocale avant toute action létale.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-3114 -->
-      <div class="role">
-        <h4 class="role-title">SCP-3114 <span class="role-status">[ CONSCIENT ]</span> <em>(Indisponible)</em></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-3114</strong>, une entité spectrale consciente pouvant prendre l'apparence d'un humain pour mieux agir.<br>
-          Vous ne savez pas utiliser les armes et, une fois dans un corps, vous héritez de ses connaissances jusqu'au changement.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-1344 -->
-      <div class="role">
-        <h4 class="role-title">SCP-1344 <span class="role-status">[ CONSCIENT ]</span> <em>[Halloween]</em></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-1344</strong>, une entité humanoïde faite de marshmallow, très agressive sauf si on vous offre des bonbons.<br>
-          Vous ne connaissez rien de la fondation et devez vous battre dès qu'une autre instance est détectée.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-1507-049 -->
-      <div class="role">
-        <h4 class="role-title">SCP-1507-049 <span class="role-status">[ SEMI‑CONSCIENT ]</span> <em>[Noël]</em></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-1507‑049</strong>, un SCP‑1507 réanimé par le docteur, qui se promène pacifiquement près de SCP‑049.<br>
-          Vous ne connaissez rien de la fondation et êtes pacifique sauf en cas de provocation.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-1507 -->
-      <div class="role">
-        <h4 class="role-title">SCP-1507 <span class="role-status">[ SEMI‑CONSCIENT ]</span> <em>[Noël]</em></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-1507</strong>, un flamant rose en plastique obéissant aux ordres du SCP‑1507‑Alpha.<br>
-          Vous ne connaissez rien de la fondation et restez pacifique sauf si attaqué.
-        </p>
-      </div>
-
-      <!-- Rôle : SCP-1507-Alpha -->
-      <div class="role">
-        <h4 class="role-title">SCP-1507‑Alpha <span class="role-status">[ CONSCIENT ]</span> <em>[Noël]</em></h4>
-        <p class="role-desc">
-          Vous êtes <strong class="important">SCP-1507‑Alpha</strong>, un flamant rose en plastique plus grand et plus fort que ses congénères.<br>
-          En tant que SCP conscient, vous pouvez choisir d'être hostile ou non.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Révocations -->
-  <section id="revocations" class="content">
-    <h2>Révocations</h2>
-    <p>Liste des éléments révoqués et mises à jour concernant le serveur.</p>
-  </section>
-
-  <!-- Section Commandes -->
-  <section id="commandes" class="content">
-    <h2>Commandes</h2>
-    <p>Ici se trouve la liste des commandes disponibles sur le serveur.</p>
-  </section>
-
   <!-- Section Protocoles -->
   <section id="protocoles" class="content">
     <h2>Protocoles</h2>
@@ -456,6 +95,73 @@
         <li>En cas de <strong class="important">code rouge</strong> (brèche de confinement), le personnel non combattant doit évacuer.</li>
       </ul>
     </div>
+  </section>
+
+  <!-- Section Infos -->
+  <section id="info" class="content">
+    <h2>Informations</h2>
+    <p>Serveur RolePlay moddé sur SCP : SL créé par <span class="important">Le dompteur de raptor</span> et <span class="important">MrPancake</span>.</p>
+    <!-- (Ici, vous pouvez ajouter des images ou icônes associées aux rôles si besoin) -->
+  </section>
+
+  <!-- Section Commandes -->
+  <section id="commandes" class="content">
+    <h2>Commandes</h2>
+    <div class="commandes-section">
+      <p class="section-subtitle"><strong>Fonctionnalité/commande :</strong></p>
+      <ul>
+        <li>Si vous êtes un <strong class="important">Insurgé du chaos</strong>, faites <span class="important">.hack</span> dans la salle des serveurs pour les pirater et déconfiner SCP‑079.</li>
+        <li>Si vous êtes <strong class="important">Insurgé du chaos</strong>, faites <span class="important">.copy</span> pour copier SCP‑079 et l'évacuer en sortant de la section souterraine du site.</li>
+        <li>Si vous êtes <strong class="important">Capitaine F.I.M</strong> ou <strong class="important">Commandant UIU</strong>, faites <span class="important">.decontamination</span> dans la salle des serveurs pour activer la décontamination.</li>
+        <li>Si vous êtes <strong class="important">Insurgé du chaos</strong>, <strong class="important">Main du serpent</strong> ou <strong class="important">Garde infiltré</strong>, faites <span class="important">.106</span> pour pirater le confinement de SCP‑106 et le libérer.</li>
+        <li>Si vous êtes un <strong class="important">humain</strong>, faites <span class="important">.sacrifice</span> pour vous sacrifier dans le femur breaker.</li>
+        <li>Si vous êtes un <strong class="important">humain</strong>, faites <span class="important">.activate</span> pour activer le femur breaker.</li>
+        <li>Si vous êtes un <strong class="important">concierge</strong> et <strong class="important">chef DI&amp;ST</strong> :
+          <ul>
+            <li>Faites <span class="important">.clean</span> pour nettoyer le corps le plus près de vous.</li>
+            <li>Faites <span class="important">.iclean</span> pour supprimer l'objet que vous visez.</li>
+          </ul>
+        </li>
+        <li>Si vous êtes un <strong class="important">humain</strong> :
+          <ul>
+            <li>Faites <span class="important">.294 [nom de la boisson]</span> (ex. : <span class="important">.294 water</span>) avec une pièce de monnaie dans la main devant le SCP pour obtenir une boisson (plus de 100 commandes disponibles).</li>
+            <li>Faites <span class="important">.punch</span> pour frapper de façon RP les autres joueurs (<em>respecter le FearRP</em>).</li>
+            <li>Faites <span class="important">.push</span> pour pousser de façon RP les autres joueurs.</li>
+            <li>Faites <span class="important">.steal</span> pour tenter de voler un objet dans l'inventaire d'un autre joueur (<em>à vos risques et périls</em>).</li>
+            <li>Faites <span class="important">.cuff</span> avec une arme dans la main pour menotter un joueur de votre team.</li>
+            <li>Faites <span class="important">.heal</span> sur un SCP avec un objet destiné à soigner.</li>
+          </ul>
+        </li>
+        <li>Si vous êtes <strong class="important">SCP‑079</strong> :
+          <ul>
+            <li>Faites <span class="important">.simulate [ci/mtf/recont]</span> pour envoyer un faux message via C.A.S.S.I.E.</li>
+            <li>Faites <span class="important">.find [id joueur/nom joueur]</span> pour vous téléporter automatiquement dans la même salle que la cible.</li>
+            <li>Faites <span class="important">.overload</span> pour désactiver les générateurs en cours d'activation.</li>
+            <li>Faites <span class="important">.overcharge [1-60]</span> pour désactiver les lumières de tout le site pendant un temps donné (maximum 60 secondes).</li>
+            <li>Faites <span class="important">.gaz</span> pour activer le système de gaz dans une salle.</li>
+            <li>Faites <span class="important">.flash</span> pour flasher avec la caméra les personnes qui vous regardent.</li>
+          </ul>
+        </li>
+        <li>Si vous êtes un <strong class="important">SCP</strong> :
+          <ul>
+            <li>Faites <span class="important">.conf</span> pour vous reconfiner en SCP.</li>
+          </ul>
+        </li>
+        <li>Si vous êtes <strong class="important">SCP‑049</strong>, appuyez sur la touche [ALT] pour activer le chat de proximité et parler aux humains.</li>
+        <li>Si vous êtes <strong class="important">SCP‑999</strong>, appuyez sur la touche [ALT] pour activer votre capacité de soins.</li>
+        <li>Si vous êtes <strong class="important">SCP‑575</strong>, appuyez sur la touche [ALT] pour activer votre capacité et éteindre toutes les lumières de la fondation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Révocations -->
+  <section id="revocations" class="content">
+    <h2>Révocations</h2>
+    <p>
+      Cette page est dédiée aux demandes de révocation de sanction (warn, ban temporaire ou ban permanent).<br>
+      Pour toute demande de révocation, veuillez remplir le questionnaire suivant : <a href="https://form.jotform.com/240366450124347" target="_blank" class="link">https://form.jotform.com/240366450124347</a>.<br>
+      Si vous êtes sanctionné(e) de façon injuste, votre sanction pourra être retirée. Si elle est justifiée, ne tentez pas de demander une révocation.
+    </p>
   </section>
 
   <!-- Footer -->
