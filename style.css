@@ -184,48 +184,52 @@ nav ul li a:hover::after {
   margin-bottom: 8px;
 }
 
-/* Sections Informations */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Section Informations (fond noir, texte blanc) */
+.info-section {
+  background: #000;       /* Fond noir, si vous voulez voir les particules derrière, mettez du semi-transparent ou transparent */
+  padding: 20px;
+  color: #fff;
 }
 
+/* Carte d'information : image + description */
 .info-card {
   display: flex;
-  width: 600px; /* Taille moyenne, à ajuster selon vos besoins */
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid red;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  align-items: flex-start; /* aligne le texte et l'image en haut */
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.info-card:hover {
-  transform: scale(1.02);
-}
-
-.info-image {
-  width: 40%;       /* L'image occupe 40% de la carte */
+.info-img {
+  width: 250px;           /* Taille de l'image, ajustez selon vos besoins */
   object-fit: cover;
+  border: 2px solid orange;   /* Bordure de couleur orange */
+  border-radius: 5px;
 }
 
-.info-description {
-  width: 60%;       /* La description occupe 60% de la carte */
-  padding: 15px;
+.info-details {
+  max-width: 600px;       /* Limite la largeur du texte, ajustez à votre convenance */
 }
 
-.info-description h3 {
-  color: red;
+.role-title {
+  color: orange;
+  font-size: 1.8em;
   margin-bottom: 10px;
-  font-size: 1.5em;
 }
 
-.info-description p {
-  line-height: 1.5;
+.role-description {
   font-size: 1em;
+  line-height: 1.5;
 }
+
+/* Classes utilitaires pour mettre en valeur certains mots */
+.highlight {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
 
 
 /* Section Protocoles */
