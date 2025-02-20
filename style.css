@@ -183,47 +183,56 @@ nav ul li a:hover::after {
 .rules-section ul li {
   margin-bottom: 8px;
 }
-/* Section .info-section (style de base) */
+/* Section #info - style général */
 .info-section {
   position: relative;
-  /* Si vous voulez un fond noir ou transparent, ajustez ici.
-     Par ex. : background: #000; ou background: transparent; */
+  /* background: #000;  <-- ajustez si besoin (transparent, noir, etc.) */
 }
 
-/* Conteneur qui scrolle verticalement */
-.info-scroll {
-  max-height: 600px;  /* Hauteur limite (ajustez selon vos besoins) */
-  overflow-y: auto;   /* Active le scroll vertical si le contenu dépasse 600px */
-  margin-top: 20px;
-  padding-right: 10px; /* Évite que la barre de scroll ne chevauche le texte */
+/* Conteneur qui scrolle horizontalement */
+.info-hscroll {
+  display: flex;          /* Aligne les cartes sur une ligne */
+  gap: 20px;              /* Espace entre chaque carte */
+  overflow-x: auto;       /* Scroll horizontal si les cartes débordent */
+  padding-bottom: 10px;   /* Petite marge pour éviter que la barre de scroll
+                             ne chevauche le contenu */
 }
 
-/* Chaque rôle (ligne) */
-.info-row {
+/* Chaque carte (image + texte) */
+.info-card {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid orange;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 400px; /* Largeur minimum pour chaque carte, ajustez à votre convenance */
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.02);
 }
 
 /* L'image (à gauche) */
 .info-img {
-  width: 200px;       /* Largeur fixe, ajustez selon vos besoins */
-  height: auto;       /* Conserve le ratio pour éviter de déformer l'image */
+  width: 150px;
+  height: auto;
   margin-right: 20px;
   border: 2px solid orange;
   border-radius: 5px;
-  object-fit: contain; /* Montre l'image en entier, sans la rogner */
+  object-fit: contain;
 }
 
 /* Le texte (à droite) */
 .info-text {
-  flex: 1;             /* Pour occuper le reste de l'espace */
-  color: #fff;         /* Texte blanc */
+  flex: 1; /* Le texte occupe le reste de l'espace dans la carte */
+  color: #fff;
 }
 
 .info-text h3 {
   color: orange;
-  font-size: 1.6em;
+  font-size: 1.4em;
   margin-bottom: 10px;
 }
 
