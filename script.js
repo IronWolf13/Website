@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Animations d'entrée plus rapides pour la section Hero
+  // Animations d'entrée rapides pour la section Hero
   gsap.from(".hero h2", { opacity: 0, y: -50, duration: 0.5 });
   gsap.from(".hero p", { opacity: 0, y: 50, duration: 0.5, delay: 0.2 });
   gsap.from(".btn", { opacity: 0, scale: 0.5, duration: 0.5, delay: 0.3 });
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Mise à jour de l'onglet actif incluant la section Accueil (hero)
+  // Mise à jour de l'onglet actif incluant la section Accueil
   gsap.registerPlugin(ScrollTrigger);
   const sections = gsap.utils.toArray(".content");
   sections.forEach(section => {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Configuration Particles.js en mode "bubble" pour interagir dynamiquement avec le curseur
+// Configuration Particles.js en mode "bubble"
 particlesJS("particles-js", {
   "particles": {
     "number": {
