@@ -186,7 +186,7 @@ nav ul li a:hover::after {
 /* Section #info - style général */
 .info-section {
   position: relative;
-  /* background: #000;  <-- ajustez si besoin (transparent, noir, etc.) */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* Conteneur qui scrolle horizontalement */
@@ -195,18 +195,17 @@ nav ul li a:hover::after {
   gap: 20px;              /* Espace entre chaque carte */
   overflow-x: auto;       /* Scroll horizontal si les cartes débordent */
   padding-bottom: 10px;   /* Petite marge pour éviter que la barre de scroll
-                             ne chevauche le contenu */
+
 }
 
-/* Chaque carte (image + texte) */
 .info-card {
   display: flex;
   align-items: flex-start;
   background: rgba(0, 0, 0, 0.7);
-  border: 2px solid orange;
+  border: 2px solid white;
   border-radius: 8px;
   padding: 10px;
-  min-width: 400px; /* Largeur minimum pour chaque carte, ajustez à votre convenance */
+  min-width: 400px; 
   transition: transform 0.3s ease;
 }
 
@@ -219,7 +218,7 @@ nav ul li a:hover::after {
   width: 150px;
   height: auto;
   margin-right: 20px;
-  border: 2px solid orange;
+  border: 2px solid white;
   border-radius: 5px;
   object-fit: contain;
 }
@@ -231,7 +230,7 @@ nav ul li a:hover::after {
 }
 
 .info-text h3 {
-  color: orange;
+  color: white;
   font-size: 1.4em;
   margin-bottom: 10px;
 }
