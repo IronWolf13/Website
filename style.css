@@ -24,6 +24,31 @@ body {
 }
 
 /* Header transparent */
+/* Pour les sections de contenu, on laisse le fond transparent pour la section Accueil */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: transparent; /* Fond transparent pour l'accueil */
+}
+
+/* Pour les autres sections, vous pouvez conserver un fond semi-transparent ou adapter selon vos besoins */
+.content {
+  margin: 120px auto 60px;
+  padding: 40px 20px;
+  width: 85%;
+  background: rgba(30, 30, 30, 0.95); /* Vous pouvez ajuster ici si nécessaire */
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Header transparent */
 header {
   position: fixed;
   top: 0;
@@ -32,9 +57,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: transparent; /* Barre transparente */
   z-index: 1000;
 }
+
+
 .logo {
   height: 50px;
   transition: transform 0.3s ease;
@@ -42,6 +69,7 @@ header {
 .logo:hover {
   transform: scale(1.1);
 }
+
 
 /* Menu avec animation de trait sous le texte */
 nav ul {
