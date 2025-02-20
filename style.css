@@ -183,52 +183,47 @@ nav ul li a:hover::after {
 .rules-section ul li {
   margin-bottom: 8px;
 }
-/* Section #info - style général */
+/* Section .info-section (style de base) */
 .info-section {
   position: relative;
+  /* Si vous voulez un fond noir ou transparent, ajustez ici.
+     Par ex. : background: #000; ou background: transparent; */
 }
 
-.info-hscroll {
-  display: flex;        
-  gap: 20px;           
-  overflow-x: auto;      
-  padding-bottom: 10px;  
-
+/* Conteneur qui scrolle verticalement */
+.info-scroll {
+  max-height: 600px;  /* Hauteur limite (ajustez selon vos besoins) */
+  overflow-y: auto;   /* Active le scroll vertical si le contenu dépasse 600px */
+  margin-top: 20px;
+  padding-right: 10px; /* Évite que la barre de scroll ne chevauche le texte */
 }
 
-.info-card {
+/* Chaque rôle (ligne) */
+.info-row {
   display: flex;
   align-items: flex-start;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid white;
-  border-radius: 8px;
-  padding: 10px;
-  min-width: 400px; 
-  transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.info-card:hover {
-  transform: scale(1.02);
-}
-
+/* L'image (à gauche) */
 .info-img {
-  width: 150px;
-  height: auto;
+  width: 200px;       /* Largeur fixe, ajustez selon vos besoins */
+  height: auto;       /* Conserve le ratio pour éviter de déformer l'image */
   margin-right: 20px;
-  border: 2px solid white;
+  border: 2px solid orange;
   border-radius: 5px;
-  object-fit: contain;
+  object-fit: contain; /* Montre l'image en entier, sans la rogner */
 }
 
-
+/* Le texte (à droite) */
 .info-text {
-  flex: 1;
-  color: #fff;
+  flex: 1;             /* Pour occuper le reste de l'espace */
+  color: #fff;         /* Texte blanc */
 }
 
 .info-text h3 {
-  color: white;
-  font-size: 1.4em;
+  color: orange;
+  font-size: 1.6em;
   margin-bottom: 10px;
 }
 
@@ -236,8 +231,6 @@ nav ul li a:hover::after {
   line-height: 1.5;
   font-size: 1em;
 }
-
-
 
 
 /* Section Protocoles */
