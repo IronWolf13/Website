@@ -184,6 +184,50 @@ nav ul li a:hover::after {
   margin-bottom: 8px;
 }
 
+/* Sections Informations */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.info-card {
+  display: flex;
+  width: 600px; /* Taille moyenne, à ajuster selon vos besoins */
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid red;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.02);
+}
+
+.info-image {
+  width: 40%;       /* L'image occupe 40% de la carte */
+  object-fit: cover;
+}
+
+.info-description {
+  width: 60%;       /* La description occupe 60% de la carte */
+  padding: 15px;
+}
+
+.info-description h3 {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.info-description p {
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+
 /* Section Protocoles */
 .protocoles-section ul {
   list-style: disc;
