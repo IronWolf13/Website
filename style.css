@@ -1,3 +1,4 @@
+/* Corps de page */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Fond ParticleJS */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -15,6 +17,7 @@ body {
   z-index: -1;
 }
 
+/* Barre de navigation */
 nav {
   background: #444;
   padding: 10px;
@@ -38,10 +41,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  transform: scale(1.1);  /* Animation de survol */
+  transform: scale(1.1);
   color: #ccc;
 }
 
+/* Sections repliables */
 .section-header {
   cursor: pointer;
   padding: 10px;
@@ -63,6 +67,7 @@ nav ul li a:hover {
   transition: max-height 0.5s ease;
 }
 
+/* Style CMD window */
 .cmd-window {
   background: #000;
   font-family: 'Courier New', monospace;
@@ -70,6 +75,7 @@ nav ul li a:hover {
   border: 1px solid #fff;
 }
 
+/* Boutons Devlogs */
 .devlogs button {
   background: #555;
   border: none;
