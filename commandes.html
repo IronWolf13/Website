@@ -4,26 +4,6 @@
   <meta charset="UTF-8">
   <title>Oméga Facility - Commandes</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Styles spécifiques à la page Commandes */
-    .cmd-content {
-      background: #000;
-      font-family: 'Courier New', monospace;
-      padding: 25px;
-      max-width: 1800px;
-      margin: 50px auto;
-      color: #0f0;
-      font-size: 2em; /* Texte plus grand */
-      line-height: 2;
-    }
-    .typewriter {
-      overflow: hidden;
-      white-space: nowrap;
-      letter-spacing: .15em;
-      /* Suppression de la barre (caret) */
-      /* border-right: .15em solid #0f0; */
-    }
-  </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -39,53 +19,25 @@
     </ul>
   </nav>
   
-  <div class="cmd-content">
-    <div id="typewriter" class="typewriter"></div>
+  <div id="content">
+    <h1 style="text-align: center; margin-top: 30px;">Commandes</h1>
+    
+    <div class="section-container active" id="section1-container">
+      <div class="section-header" data-target="section1-content">Liste des commandes</div>
+      <div class="section-content" id="section1-content" style="max-height: 500px;">
+        <p>.hack - Permet, si vous êtes un Insurgé du Chaos et que vous êtes dans la salle 008, de déconfiner SCP-079.</p>
+        <p>.copy - Permet, si vous êtes un Insurgé du Chaos ou un Main du serpent et que vous êtes dans la salle 008, de copier SCP-079.</p>
+        <p>.decontamination - Permet, si vous êtes un Capitaine F.I.M ou un Commandant UIU et que vous êtes dans la salle 008, d'activer la décontamination en light containment zone.</p>
+        <p>.106 - Permet, si vous êtes un Insurgé du chaos ou un Main du serpent ou un Garde Infiltré et que vous êtes dans le confinement de 106, de le déconfiner.</p>
+        <p>.sacrifice - Permet de se sacrifier dans le femur breaker.</p>
+        <p>.activate - Permet d'activer le femur breaker et reconfiner 106.</p>
+        <p>.clean - Permet, si vous êtes Concierge ou Chef DI&ST, de nettoyer un cadavre que vous visez.</p>
+        <p>.iclean - Permet, si vous êtes Concierge ou Chef DI&ST, de nettoyer un objet que vous visez.</p>
+      </div>
+    </div>
   </div>
   
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="app.js"></script>
-  <script>
-    // Tableau des commandes à afficher, une par une
-    var commands = [
-      "help",
-      "Voici la liste des commandes",
-      ".hack - Permet, si vous êtes un Insurgé du Chaos et que vous êtes dans la salle 008, de déconfiner SCP-079.",
-      ".copy - Permet, si vous êtes un Insurgé du Chaos ou un Main du serpent et que vous êtes dans la salle 008, de copier SCP-079.",
-      ".decontamination - Permet, si vous êtes un Capitaine F.I.M ou un Commandant UIU et que vous êtes dans la salle 008, d'activer la décontamination en light containment zone.",
-      ".106 - Permet, si vous êtes un Insurgé du chaos ou un Main du serpent ou un Garde Infiltré et que vous êtes dans le confinement de 106, de le déconfiner.",
-      ".sacrifice - Permet de se sacrifier dans le femur breaker.",
-      ".activate - Permet d'activer le femur breaker et reconfiner 106.",
-      ".clean - Permet, si vous êtes Concierge ou Chef DI&ST, de nettoyer un cadavre que vous visez.",
-      ".iclean - Permet, si vous êtes Concierge ou Chef DI&ST, de nettoyer un objet que vous visez."
-    ];
-
-    var currentCommand = 0;
-    var currentChar = 0;
-    var typeSpeed = 25;      // Vitesse d'affichage (ms par caractère)
-    var commandDelay = 500; // Délai entre chaque commande (ms)
-
-    function typeCommand() {
-      if (currentCommand < commands.length) {
-        var commandText = commands[currentCommand];
-        if (currentChar < commandText.length) {
-          document.getElementById("typewriter").innerHTML += commandText.charAt(currentChar);
-          currentChar++;
-          setTimeout(typeCommand, typeSpeed);
-        } else {
-          // Passage à la commande suivante avec un double saut de ligne
-          document.getElementById("typewriter").innerHTML += "<br><br>";
-          currentCommand++;
-          currentChar = 0;
-          setTimeout(typeCommand, commandDelay);
-        }
-      }
-    }
-
-    window.onload = function() {
-      document.getElementById("typewriter").innerHTML = "";
-      typeCommand();
-    };
-  </script>
 </body>
 </html>
