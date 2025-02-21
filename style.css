@@ -2,14 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: #333; /* gris foncé */
+  background: #222; /* Fond sombre */
   color: #fff;
-  font-family: Arial, sans-serif;
-  position: relative;
-  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Fond ParticleJS */
+/* ParticleJS en fond */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -17,76 +15,177 @@ body {
   z-index: -1;
 }
 
-/* Barre de navigation */
+/* Barre de navigation centrée avec ombre */
 nav {
   background: #444;
-  padding: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2em;
   transition: transform 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
   transform: scale(1.1);
-  color: #ccc;
+  color: #ddd;
 }
 
-/* Sections repliables */
+/* Logo discret */
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+}
+
+/* Style pour la page Acceuil */
+.acceuil-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 100px auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.acceuil-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.acceuil-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Icônes décoratives (Font Awesome) */
+.acceuil-icons i {
+  font-size: 2em;
+  margin: 0 10px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.acceuil-icons i:hover {
+  color: #fff;
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Conteneurs de sections pour Réglements et Protocoles */
+.section-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #555;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
 .section-header {
   cursor: pointer;
-  padding: 10px;
-  background: #555;
-  border: 1px solid #666;
-  margin-top: 10px;
+  padding: 15px;
+  background: #666;
+  border-bottom: 1px solid #777;
   transition: background 0.3s;
 }
 
 .section-header:hover {
-  background: #666;
+  background: #777;
 }
 
 .section-content {
-  padding: 10px;
-  border: 1px solid #666;
-  border-top: none;
+  padding: 15px;
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 
-/* Style CMD window */
-.cmd-window {
+/* Lorsque la section est ouverte, on lui applique la classe 'active' */
+.section-container.active .section-content {
+  max-height: 500px; /* Ajustez selon la taille du contenu */
+}
+
+/* Page Commandes – effet typewriter */
+.cmd-content {
   background: #000;
   font-family: 'Courier New', monospace;
   padding: 20px;
   border: 1px solid #fff;
+  max-width: 800px;
+  margin: 50px auto;
+  color: #0f0;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #0f0;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+  font-size: 1.2em;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #0f0; }
 }
 
 /* Boutons Devlogs */
-.devlogs button {
-  background: #555;
-  border: none;
-  padding: 10px 20px;
-  color: #fff;
-  margin: 5px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+.devlogs {
+  text-align: center;
+  margin: 50px auto;
 }
 
-.devlogs button:hover {
+.devlogs .devlog-btn {
   background: #666;
+  border: none;
+  padding: 20px 30px;
+  margin: 15px;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  border-radius: 5px;
+}
+
+.devlogs .devlog-btn:hover {
+  background: #777;
   transform: scale(1.05);
+}
+
+.devlogs .devlog-description {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  nav ul li a { font-size: 1em; }
+  .acceuil-content h1 { font-size: 2em; }
 }
