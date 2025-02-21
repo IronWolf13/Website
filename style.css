@@ -1,299 +1,86 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #121212;
+  background: #333; /* gris foncé */
   color: #fff;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
   position: relative;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Fond Particles.js */
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
 }
 
-/* Header transparent */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  background: transparent;
+nav {
+  background: #444;
+  padding: 10px;
 }
-
-.content {
-  margin: 120px auto 60px;
-  padding: 40px 20px;
-  width: 85%;
-  background: rgba(30, 30, 30, 0.95); 
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent; 
-  z-index: 1000;
-}
-
-
-.logo {
-  height: 50px;
-  transition: transform 0.3s ease;
-}
-.logo:hover {
-  transform: scale(1.1);
-}
-
 
 nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
+
 nav ul li {
-  margin: 0 10px;
+  margin-right: 20px;
 }
+
 nav ul li a {
-  position: relative;
-  text-decoration: none;
   color: #fff;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 5px 0;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
 }
+
 nav ul li a:hover {
-  transform: scale(1.05);
-}
-nav ul li a.active {
-  color: white;
+  transform: scale(1.1);  /* Animation de survol */
+  color: #ccc;
 }
 
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  height: 2px;
-  background: white;
-  width: 0%;
-  transition: width 0.3s ease;
-}
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-/* Accueil */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-.hero h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  color: white;
-}
-.tagline, .subtagline {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-.important {
-  color: white;
-  font-weight: bold;
-}
-.btn {
-  padding: 12px 25px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-.btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-.content {
-  margin: 120px auto 60px;
-  padding: 40px 20px;
-  width: 85%;
-  background: rgba(30, 30, 30, 0.95);
-  border-radius: 10px;
-  opacity: 100;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.content h2 {
-  margin-bottom: 20px;
-  color: white;
-}
-.content p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Règlement */
-.rules-section {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  margin: 20px 0;
-  border-left: 5px solid white;
-  border-radius: 5px;
-}
-.rules-section h3, .rules-section h4 {
-  color: white;
-  margin-bottom: 10px;
-}
-.rules-section ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-.rules-section ul li {
-  margin-bottom: 8px;
-}
-/* Informations  */
-.info-section {
-  position: relative;
-                      
-}
-
-.cards-container {
-  max-height: 550px;     
-  overflow-y: auto;     
-  padding-right: 5px;   
-}
-
-.info-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid white;
-  border-radius: 8px;
+.section-header {
+  cursor: pointer;
   padding: 10px;
-  transition: transform 0.3s ease;
+  background: #555;
+  border: 1px solid #666;
+  margin-top: 10px;
+  transition: background 0.3s;
 }
 
-.info-card:hover {
-  transform: scale(1.01);
+.section-header:hover {
+  background: #666;
 }
 
-.info-img {
-  width: 250px;           
-  height: auto;           
-  object-fit: contain;    
-  border: 2px solid white;
-  border-radius: 5px;
+.section-content {
+  padding: 10px;
+  border: 1px solid #666;
+  border-top: none;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
-
-.info-details {
-  max-width: 350px;       
-}
-
-.role-title {
-  color: white;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.role-description {
-  font-size: 1em;
-  line-height: 1.5;
-  color: #fff;          
-}
-
-
-/* Protocoles */
-.protocoles-section ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-.protocoles-section ul li {
-  margin-bottom: 8px;
-  color: white;
-}
-
-/* Commandes */
-.commandes-section {
-  background: rgba(0, 0, 0, 0.8);
+.cmd-window {
+  background: #000;
+  font-family: 'Courier New', monospace;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-}
-.commandes-section .section-subtitle {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: white;
-}
-.commandes-section ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-.commandes-section ul li {
-  margin-bottom: 8px;
-  color: white;
+  border: 1px solid #fff;
 }
 
-.character-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-.character-gallery img {
-  width: 150px;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 5px;
+.devlogs button {
+  background: #555;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
-/* Révocations */
-.content a.link {
-  color: white;
-  text-decoration: underline;
-}
-
-
-footer {
-  padding: 20px;
-  background: rgba(0,0,0,0.85);
-  text-align: center;
-  margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
+.devlogs button:hover {
+  background: #666;
+  transform: scale(1.05);
 }
