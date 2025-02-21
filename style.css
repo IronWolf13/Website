@@ -86,7 +86,7 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 nav ul li a.active {
-  color: red;
+  color: white;
 }
 
 nav ul li a::after {
@@ -95,7 +95,7 @@ nav ul li a::after {
   left: 0;
   bottom: -3px;
   height: 2px;
-  background: red;
+  background: white;
   width: 0%;
   transition: width 0.3s ease;
 }
@@ -116,14 +116,14 @@ nav ul li a:hover::after {
 .hero h2 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: red;
+  color: white;
 }
 .tagline, .subtagline {
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 .important {
-  color: red;
+  color: white;
   font-weight: bold;
 }
 .btn {
@@ -151,7 +151,7 @@ nav ul li a:hover::after {
 }
 .content h2 {
   margin-bottom: 20px;
-  color: red;
+  color: white;
 }
 .content p {
   line-height: 1.6;
@@ -163,11 +163,11 @@ nav ul li a:hover::after {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   margin: 20px 0;
-  border-left: 5px solid red;
+  border-left: 5px solid white;
   border-radius: 5px;
 }
 .rules-section h3, .rules-section h4 {
-  color: red;
+  color: white;
   margin-bottom: 10px;
 }
 .rules-section ul {
@@ -238,7 +238,7 @@ nav ul li a:hover::after {
 }
 .protocoles-section ul li {
   margin-bottom: 8px;
-  color: red;
+  color: white;
 }
 
 /* Commandes */
@@ -251,7 +251,7 @@ nav ul li a:hover::after {
 .commandes-section .section-subtitle {
   font-size: 1.1em;
   margin-bottom: 10px;
-  color: red;
+  color: white;
 }
 .commandes-section ul {
   list-style: disc;
@@ -259,7 +259,7 @@ nav ul li a:hover::after {
 }
 .commandes-section ul li {
   margin-bottom: 8px;
-  color: red;
+  color: white;
 }
 
 .character-gallery {
@@ -271,13 +271,13 @@ nav ul li a:hover::after {
 .character-gallery img {
   width: 150px;
   height: auto;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 5px;
 }
 
 /* Révocations */
 .content a.link {
-  color: red;
+  color: white;
   text-decoration: underline;
 }
 
