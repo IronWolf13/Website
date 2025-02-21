@@ -7,6 +7,7 @@
 </head>
 <body>
   <div id="particles-js"></div>
+  
   <nav>
     <ul>
       <li><a href="acceuil.html">Acceuil</a></li>
@@ -17,15 +18,18 @@
       <li><a href="https://discord.gg" target="_blank">Discord</a></li>
     </ul>
   </nav>
+  
   <div id="content">
-    <h1>Protocole</h1>
-    <div class="protocole-section">
-      <div class="section-header" data-target="protocole1">Protocole</div>
-      <div class="section-content" id="protocole1" style="display: block;">
+    <h1 style="text-align: center; margin-top: 30px;">Protocoles</h1>
+    
+    <div class="section-container active" id="protocol-container">
+      <div class="section-header" data-target="protocol-content">Protocole</div>
+      <div class="section-content" id="protocol-content" style="max-height: 500px;">
         <p>Contenu du protocole...</p>
       </div>
     </div>
   </div>
+  
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="app.js"></script>
 </body>
