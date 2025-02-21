@@ -127,7 +127,7 @@ nav ul li a:hover {
 
 /* Lorsque la section est ouverte, on lui applique la classe 'active' */
 .section-container.active .section-content {
-  max-height: 500px; /* Ajustez selon la taille du contenu */
+  max-height: 1200px; /* Ajustez selon la taille du contenu */
 }
 
 /* Page Commandes – effet typewriter */
