@@ -95,7 +95,7 @@ nav ul li a:hover {
 /* Sections pour Réglements et Protocoles */
 .section-container {
   width: 90%;
-  max-width: 800px;      /* Plus grand horizontalement */
+  max-width: 1200px;      /* Plus grand horizontalement */
   margin: 20px auto;
   background: #555;
   border-radius: 5px;
