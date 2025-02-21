@@ -1,4 +1,3 @@
-/* Réinitialisation et styles de base */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,6 @@ body {
 }
 
 /* Header transparent */
-/* Pour les sections de contenu, on laisse le fond transparent pour la section Accueil */
 .hero {
   height: 100vh;
   display: flex;
@@ -33,22 +31,20 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background: transparent; /* Fond transparent pour l'accueil */
+  background: transparent;
 }
 
-/* Pour les autres sections, vous pouvez conserver un fond semi-transparent ou adapter selon vos besoins */
 .content {
   margin: 120px auto 60px;
   padding: 40px 20px;
   width: 85%;
-  background: rgba(30, 30, 30, 0.95); /* Vous pouvez ajuster ici si nécessaire */
+  background: rgba(30, 30, 30, 0.95); 
   border-radius: 10px;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Header transparent */
 header {
   position: fixed;
   top: 0;
@@ -57,7 +53,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent; /* Barre transparente */
+  background: transparent; 
   z-index: 1000;
 }
 
@@ -71,7 +67,6 @@ header {
 }
 
 
-/* Menu avec animation de trait sous le texte */
 nav ul {
   list-style: none;
   display: flex;
@@ -93,7 +88,7 @@ nav ul li a:hover {
 nav ul li a.active {
   color: red;
 }
-/* Trait animé sous les onglets */
+
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -108,7 +103,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Section Accueil (Hero) */
+/* Accueil */
 .hero {
   height: 100vh;
   display: flex;
@@ -144,14 +139,13 @@ nav ul li a:hover::after {
   color: #000;
 }
 
-/* Sections de contenu */
 .content {
   margin: 120px auto 60px;
   padding: 40px 20px;
   width: 85%;
   background: rgba(30, 30, 30, 0.95);
   border-radius: 10px;
-  opacity: 0;
+  opacity: 100;
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -164,7 +158,7 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
 }
 
-/* Section Règlement */
+/* Règlement */
 .rules-section {
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -183,51 +177,45 @@ nav ul li a:hover::after {
 .rules-section ul li {
   margin-bottom: 8px;
 }
-/* Section #info - On peut limiter sa hauteur et activer un scroll vertical */
+/* Informations  */
 .info-section {
-  /* Fond, marge, etc. selon vos besoins */
   position: relative;
-  /* height: 600px;  <-- Si vous voulez TOUTE la section scrollable,
-                          décommentez et ajustez la hauteur */
+                      
 }
 
-/* Conteneur des cartes - c’est ici qu’on peut mettre un scroll vertical */
 .cards-container {
-  max-height: 600px;      /* Limite la hauteur du conteneur */
-  overflow-y: auto;       /* Scroll vertical si le contenu dépasse 600px */
-  padding-right: 10px;    /* Petite marge pour éviter que le scroll barre
-                             ne chevauche le texte */
+  max-height: 550px;     
+  overflow-y: auto;     
+  padding-right: 5px;   
 }
 
-/* Carte d'information */
 .info-card {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 20px;
   background: rgba(0, 0, 0, 0.7);
-  border: 2px solid orange;
+  border: 2px solid white;
   border-radius: 8px;
   padding: 10px;
   transition: transform 0.3s ease;
 }
 
 .info-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
-/* Image - on veille à garder les proportions */
 .info-img {
-  width: 250px;           /* Largeur fixe ou ajustable */
-  height: auto;           /* Pour conserver les proportions */
-  object-fit: contain;    /* Montre l’image en entier sans la rogner */
-  border: 2px solid orange;
+  width: 250px;           
+  height: auto;           
+  object-fit: contain;    
+  border: 2px solid white;
   border-radius: 5px;
 }
 
-/* Zone de description */
+
 .info-details {
-  max-width: 350px;       /* Ajustez selon la place disponible */
+  max-width: 350px;       
 }
 
 .role-title {
@@ -239,11 +227,11 @@ nav ul li a:hover::after {
 .role-description {
   font-size: 1em;
   line-height: 1.5;
-  color: #fff;            /* Texte en blanc */
+  color: #fff;          
 }
 
 
-/* Section Protocoles */
+/* Protocoles */
 .protocoles-section ul {
   list-style: disc;
   margin-left: 20px;
@@ -253,7 +241,7 @@ nav ul li a:hover::after {
   color: red;
 }
 
-/* Section Commandes */
+/* Commandes */
 .commandes-section {
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -274,7 +262,6 @@ nav ul li a:hover::after {
   color: red;
 }
 
-/* Galerie d'images dans Infos */
 .character-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -288,13 +275,13 @@ nav ul li a:hover::after {
   border-radius: 5px;
 }
 
-/* Section Révocations */
+/* Révocations */
 .content a.link {
   color: red;
   text-decoration: underline;
 }
 
-/* Footer */
+
 footer {
   padding: 20px;
   background: rgba(0,0,0,0.85);
@@ -302,7 +289,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
