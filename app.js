@@ -1,4 +1,4 @@
-// Initialisation de ParticleJS avec l'option "repulse" au survol et sans animation au clic
+// Initialisation de ParticleJS avec effet "repulse" au survol
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -57,20 +57,14 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-// Gestion du clic sur les headers pour ouvrir/fermer les sections
+// Gestion des sections repliables
 document.addEventListener("DOMContentLoaded", function(){
   const headers = document.querySelectorAll(".section-header");
   headers.forEach(header => {
     header.addEventListener("click", function(){
       const targetId = this.getAttribute("data-target");
       const content = document.getElementById(targetId);
-      if(content.style.display === "block"){
-        // Fermeture avec animation
-        content.style.display = "none";
-      } else {
-        // Ouverture
-        content.style.display = "block";
-      }
+      content.style.display = (content.style.display === "block") ? "none" : "block";
     });
   });
 });
