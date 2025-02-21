@@ -91,14 +91,17 @@ nav ul li a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Conteneurs de sections pour Réglements et Protocoles */
+
 .section-container {
-  max-width: 600px;
-  margin: 150px auto;
+  width: 90%;
+  max-width: 800px;      /* Plus grand horizontalement */
+  margin: 20px auto;
   background: #555;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
+  resize: both;          /* Permet de redimensionner horizontalement et verticalement */
+  overflow: auto;
 }
 
 .section-header {
