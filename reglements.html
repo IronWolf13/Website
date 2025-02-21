@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="particles-js"></div>
-
+  
   <nav>
     <ul>
       <li><a href="acceuil.html">Acceuil</a></li>
@@ -18,53 +18,55 @@
       <li><a href="https://discord.gg" target="_blank">Discord</a></li>
     </ul>
   </nav>
-
+  
   <div id="content">
-    <h1>Règlement</h1>
+    <h1 style="text-align: center; margin-top: 30px;">Règlement</h1>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section1">Règle de base</div>
-      <div class="section-content" id="section1" style="display: block;">
+    <!-- Section "Règle de base" ouverte par défaut -->
+    <div class="section-container active" id="section1-container">
+      <div class="section-header" data-target="section1-content">Règle de base</div>
+      <div class="section-content" id="section1-content" style="max-height: 500px;">
         <p>Contenu de la règle de base...</p>
       </div>
     </div>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section2">Règle général</div>
-      <div class="section-content" id="section2">
+    <!-- Autres sections -->
+    <div class="section-container" id="section2-container">
+      <div class="section-header" data-target="section2-content">Règle général</div>
+      <div class="section-content" id="section2-content">
         <p>Contenu de la règle général...</p>
       </div>
     </div>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section3">Règle du comité d'éthique</div>
-      <div class="section-content" id="section3">
+    <div class="section-container" id="section3-container">
+      <div class="section-header" data-target="section3-content">Règle du comité d'éthique</div>
+      <div class="section-content" id="section3-content">
         <p>Contenu de la règle du comité d'éthique...</p>
       </div>
     </div>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section4">Règle rôles</div>
-      <div class="section-content" id="section4">
+    <div class="section-container" id="section4-container">
+      <div class="section-header" data-target="section4-content">Règle rôles</div>
+      <div class="section-content" id="section4-content">
         <p>Contenu de la règle rôles...</p>
       </div>
     </div>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section5">Règlement Contributeur</div>
-      <div class="section-content" id="section5">
+    <div class="section-container" id="section5-container">
+      <div class="section-header" data-target="section5-content">Règlement Contributeur</div>
+      <div class="section-content" id="section5-content">
         <p>Contenu du règlement Contributeur...</p>
       </div>
     </div>
     
-    <div class="reglement-section">
-      <div class="section-header" data-target="section6">Révocations de sanctions</div>
-      <div class="section-content" id="section6">
+    <div class="section-container" id="section6-container">
+      <div class="section-header" data-target="section6-content">Révocations de sanctions</div>
+      <div class="section-content" id="section6-content">
         <p>Contenu des révocations de sanctions...</p>
       </div>
     </div>
   </div>
-
+  
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="app.js"></script>
 </body>
