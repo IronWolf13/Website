@@ -7,6 +7,7 @@
 </head>
 <body>
   <div id="particles-js"></div>
+  
   <nav>
     <ul>
       <li><a href="acceuil.html">Acceuil</a></li>
@@ -17,14 +18,22 @@
       <li><a href="https://discord.gg" target="_blank">Discord</a></li>
     </ul>
   </nav>
-  <div id="content">
+  
+  <div id="content" style="text-align: center;">
     <h1>Devlogs - Mise à jour</h1>
     <div class="devlogs">
-      <button onclick="window.location.href='devlog_v1.html'">Version 1.0</button>
-      <button onclick="window.location.href='devlog_v2.html'">Version 2.0</button>
+      <div onclick="window.location.href='devlog_v1.html'" class="devlog-btn">
+        Version 1.0
+        <div class="devlog-description">Introduction des fonctionnalités de base.</div>
+      </div>
+      <div onclick="window.location.href='devlog_v2.html'" class="devlog-btn">
+        Version 2.0
+        <div class="devlog-description">Améliorations et animations inédites.</div>
+      </div>
       <!-- Ajoutez d'autres boutons pour chaque version -->
     </div>
   </div>
+  
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="app.js"></script>
 </body>
