@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Animations d'entrée rapides pour la section Hero
   gsap.from(".hero h2", { opacity: 0, y: -50, duration: 0.5 });
   gsap.from(".hero p", { opacity: 0, y: 50, duration: 0.5, delay: 0.2 });
   gsap.from(".btn", { opacity: 0, scale: 0.5, duration: 0.5, delay: 0.3 });
 
-  // Défilement fluide pour tous les liens du menu avec ScrollToPlugin
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Effet de survol sur les onglets
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach(link => {
     link.addEventListener("mouseenter", () => {
@@ -24,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Mise à jour de l'onglet actif incluant la section Accueil
   gsap.registerPlugin(ScrollTrigger);
   const sections = gsap.utils.toArray(".content");
   sections.forEach(section => {
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (activeLink) activeLink.classList.add("active");
   }
 
-  // Animation d'apparition des sections au scroll
   gsap.utils.toArray(".content").forEach(section => {
     gsap.to(section, {
       opacity: 1,
@@ -58,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Configuration Particles.js en mode "bubble" avec particules et lignes en blanc
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -88,8 +82,8 @@ particlesJS("particles-js", {
   "interactivity": {
     "detect_on": "canvas",
     "events": {
-      "onhover": { "enable": true, "mode": "bubble" },
-      "onclick": { "enable": true, "mode": "push" },
+      "onhover": { "enable": true, "mode": "push" },
+      "onclick": { "enable": false, "mode": "push" },
       "resize": true
     },
     "modes": {
