@@ -1,26 +1,11 @@
-// Initialisation de ParticleJS avec effet "repulse" au survol
+// Initialisation de ParticleJS via CDN ou fichier local
 particlesJS("particles-js", {
   "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.5
-    },
-    "size": {
-      "value": 3,
-      "random": true
-    },
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3, "random": true },
     "line_linked": {
       "enable": true,
       "distance": 150,
@@ -38,33 +23,32 @@ particlesJS("particles-js", {
   "interactivity": {
     "detect_on": "canvas",
     "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": false
-      },
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": false },
       "resize": true
     },
     "modes": {
-      "repulse": {
-        "distance": 100,
-        "duration": 0.4
-      }
+      "repulse": { "distance": 100, "duration": 0.4 }
     }
   },
   "retina_detect": true
 });
 
-// Gestion des sections repliables
+// Gestion des sections repliables (pour Réglements et Protocoles)
 document.addEventListener("DOMContentLoaded", function(){
   const headers = document.querySelectorAll(".section-header");
   headers.forEach(header => {
     header.addEventListener("click", function(){
       const targetId = this.getAttribute("data-target");
       const content = document.getElementById(targetId);
-      content.style.display = (content.style.display === "block") ? "none" : "block";
+      const container = this.parentElement;
+      if (container.classList.contains('active')) {
+        container.classList.remove('active');
+        content.style.maxHeight = 0;
+      } else {
+        container.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     });
   });
 });
