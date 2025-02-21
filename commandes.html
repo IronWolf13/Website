@@ -4,25 +4,24 @@
   <meta charset="UTF-8">
   <title>Oméga Facility - Commandes</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Vous pouvez adapter le style du typewriter ici ou dans style.css -->
   <style>
-    /* Ajustements spécifiques à la page Commandes */
+    /* Styles spécifiques à la page Commandes */
     .cmd-content {
       background: #000;
       font-family: 'Courier New', monospace;
-      padding: 40px;
-      max-width: 1000px;
+      padding: 50px;
+      max-width: 1200px;
       margin: 50px auto;
       color: #0f0;
-      font-size: 1.5em;
-      line-height: 1.8;
+      font-size: 2em; /* Texte plus grand */
+      line-height: 2;
     }
     .typewriter {
       overflow: hidden;
       white-space: nowrap;
       letter-spacing: .15em;
-      /* Le caret est appliqué directement sur le texte */
-      border-right: .15em solid #0f0;
+      /* Suppression de la barre (caret) */
+      /* border-right: .15em solid #0f0; */
     }
   </style>
 </head>
@@ -41,15 +40,13 @@
   </nav>
   
   <div class="cmd-content">
-    <!-- La zone de texte typewriter où les commandes seront affichées -->
     <div id="typewriter" class="typewriter"></div>
   </div>
   
-  <!-- Inclusion de ParticleJS via CDN -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="app.js"></script>
   <script>
-    // Tableau des commandes à afficher
+    // Tableau des commandes à afficher, une par une
     var commands = [
       "help",
       "Voici la liste des commandes",
@@ -76,8 +73,8 @@
           currentChar++;
           setTimeout(typeCommand, typeSpeed);
         } else {
-          // Fin de la commande en cours : passage à la ligne et attente avant la suivante
-          document.getElementById("typewriter").innerHTML += "<br>";
+          // Passage à la commande suivante avec un double saut de ligne
+          document.getElementById("typewriter").innerHTML += "<br><br>";
           currentCommand++;
           currentChar = 0;
           setTimeout(typeCommand, commandDelay);
