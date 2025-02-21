@@ -92,6 +92,7 @@ nav ul li a:hover {
 }
 
 
+/* Sections pour Réglements et Protocoles */
 .section-container {
   width: 90%;
   max-width: 800px;      /* Plus grand horizontalement */
@@ -100,9 +101,10 @@ nav ul li a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
-  resize: both;          /* Permet de redimensionner horizontalement et verticalement */
+  resize: both;          /* Permet de redimensionner à la fois horizontalement et verticalement */
   overflow: auto;
 }
+
 
 .section-header {
   cursor: pointer;
