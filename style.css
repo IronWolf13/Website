@@ -106,24 +106,42 @@ nav ul li a:hover {
   background: #666;
   border-bottom: 1px solid #777;
   transition: background 0.3s;
+  position: relative; 
 }
 
 .section-header:hover {
   background: #777;
 }
 
+.section-header::after {
+  content: '+';             
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+
+.section-container.active .section-header::after {
+  content: '-';
+  transform: translateY(-50%);
+}
+
 .section-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 0;
+  padding: 0; 
 }
 
-
+/* Quand la section est ouverte */
 .section-container.active .section-content {
   max-height: 9999px; 
-  padding: 15px;   
+  padding: 15px;    
 }
+
 
 
 
