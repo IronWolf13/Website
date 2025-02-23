@@ -113,19 +113,18 @@ nav ul li a:hover {
 }
 
 .section-content {
-  padding: 15px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
 }
 
+
 .section-container.active .section-content {
-  max-height: 1800px;
-  padding-top: 15px; 
-  padding-bottom: 15px;
+  max-height: 9999px; 
+  padding: 15px;   
 }
+
 
 
 
