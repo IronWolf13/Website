@@ -97,10 +97,8 @@ nav ul li a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
-  resize: both;          
-  overflow: auto;
+  resize: none; 
 }
-
 
 .section-header {
   cursor: pointer;
@@ -118,34 +116,20 @@ nav ul li a:hover {
   padding: 15px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* Lorsque la section est ouverte, on lui applique la classe 'active' */
 .section-container.active .section-content {
-  max-height: 1200px; /* Ajustez selon la taille du contenu */
+  max-height: 1800px;
+  padding-top: 15px; 
+  padding-bottom: 15px;
 }
 
-/* Page Commandes – effet typewriter */
-.cmd-content {
-  background: #000;
-  font-family: 'Courier New', monospace;
-  padding: 20px;
-  border: 1px solid #fff;
-  max-width: 800px;
-  margin: 50px auto;
-  color: #0f0;
-}
 
-.typewriter {
-  overflow: hidden;
-  border-right: .15em solid #0f0;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-  font-size: 1.2em;
-}
+
+
 
 @keyframes typing {
   from { width: 0; }
@@ -157,7 +141,6 @@ nav ul li a:hover {
   50% { border-color: #0f0; }
 }
 
-/* Boutons Devlogs */
 .devlogs {
   text-align: center;
   margin: 50px auto;
