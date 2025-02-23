@@ -1,13 +1,13 @@
-/* Corps de page */
+
 body {
   margin: 0;
   padding: 0;
-  background: #222; /* Fond sombre */
+  background: #222; 
   color: #fff;
   font-family: 'Arial', sans-serif;
 }
 
-/* ParticleJS en fond */
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -15,7 +15,6 @@ body {
   z-index: -1;
 }
 
-/* Barre de navigation centrée avec ombre */
 nav {
   background: #444;
   padding: 15px;
@@ -46,7 +45,6 @@ nav ul li a:hover {
   color: #ddd;
 }
 
-/* Logo discret */
 .logo {
   display: block;
   margin: 20px auto;
@@ -55,7 +53,6 @@ nav ul li a:hover {
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
 }
 
-/* Style pour la page Acceuil */
 .acceuil-content {
   text-align: center;
   max-width: 800px;
@@ -73,7 +70,6 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
-/* Icônes décoratives (Font Awesome) */
 .acceuil-icons i {
   font-size: 2em;
   margin: 0 10px;
@@ -85,23 +81,21 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* Animation fadeIn */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 
-/* Sections pour Réglements et Protocoles */
 .section-container {
-  width: 90%;
-  max-width: 1200px;      /* Plus grand horizontalement */
+  width: 70%;
+  max-width: 1200px;      
   margin: 20px auto;
   background: #555;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
-  resize: both;          /* Permet de redimensionner à la fois horizontalement et verticalement */
+  resize: both;          
   overflow: auto;
 }
 
