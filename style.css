@@ -59,7 +59,7 @@ nav ul li a:hover {
   text-align: center;
   max-width: 800px;
   margin: 100px auto;
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .acceuil-content h1 {
