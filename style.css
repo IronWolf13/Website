@@ -9,23 +9,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-body[data-page="reglements"] .classe-D { color: orange; }
-body[data-page="reglements"] .FIM { color: violet; }
-body[data-page="reglements"] .UIU { color: blue; }
-body[data-page="reglements"] .Chaos { color: green; }
-body[data-page="reglements"] .Main-du-serpent { color: magenta; }
-body[data-page="reglements"] .Concierge { color: darkorange; }
-body[data-page="reglements"] .SCP-079 { color: red; }
-body[data-page="reglements"] .SCP { color: red; }
-body[data-page="reglements"] .instances { color: red; }
-body[data-page="reglements"] .Garde { color: #999999; }
-body[data-page="reglements"] .Androide { color: green; }
-body[data-page="reglements"] .Unite-tactique-robotique { color: blue; }
-body[data-page="reglements"] .Capitaine, 
-body[data-page="reglements"] .Represseur { color: violet; }
-body[data-page="reglements"] .Commandant-UIU { color: blue; }
-body[data-page="reglements"] .Scientifique { color: #f1c232; }
-body[data-page="reglements"] .Fondation { color: #a4c2f4; }
+
 
 
 #particles-js {
@@ -107,6 +91,15 @@ nav ul li a:hover {
 }
 
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .section-container {
   width: 70%;
   max-width: 1200px;      
@@ -115,7 +108,6 @@ nav ul li a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
-  resize: none; 
 }
 
 .section-header {
@@ -124,7 +116,7 @@ nav ul li a:hover {
   background: #666;
   border-bottom: 1px solid #777;
   transition: background 0.3s;
-  position: relative; 
+  position: relative;
 }
 
 .section-header:hover {
@@ -141,7 +133,6 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-
 .section-container.active .section-header::after {
   content: '-';
   transform: translateY(-50%);
@@ -151,14 +142,24 @@ nav ul li a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 0; 
+  padding: 0;
+  opacity: 0;
 }
 
-/* Quand la section est ouverte */
 .section-container.active .section-content {
-  max-height: 9999px; 
-  padding: 15px;    
+  max-height: 1000px; 
+  padding: 15px;
+  opacity: 1;
 }
+
+.section-container.active .section-content p {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+  animation: typing 0.5s steps(40, end) forwards;
+}
+
 
 
 
