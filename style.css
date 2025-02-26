@@ -91,23 +91,15 @@ nav ul li a:hover {
 }
 
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 .section-container {
   width: 70%;
-  max-width: 1200px;
+  max-width: 1200px;      
   margin: 20px auto;
   background: #555;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   overflow: hidden;
+  resize: none; 
 }
 
 .section-header {
@@ -116,7 +108,7 @@ nav ul li a:hover {
   background: #666;
   border-bottom: 1px solid #777;
   transition: background 0.3s;
-  position: relative;
+  position: relative; 
 }
 
 .section-header:hover {
@@ -124,7 +116,7 @@ nav ul li a:hover {
 }
 
 .section-header::after {
-  content: '+';
+  content: '+';             
   position: absolute;
   right: 15px;
   top: 50%;
@@ -132,6 +124,7 @@ nav ul li a:hover {
   font-size: 18px;
   transition: transform 0.3s ease;
 }
+
 
 .section-container.active .section-header::after {
   content: '-';
@@ -141,20 +134,16 @@ nav ul li a:hover {
 .section-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
-  opacity: 0;
-  transform: translateY(-10px);
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0; 
 }
 
 .section-container.active .section-content {
-  max-height: 500px; 
-  opacity: 1;
-  transform: translateY(0);
+  max-height: 9999px; 
+  padding: 15px;    
 }
 
-.section-container.active .section-content p {
-  margin: 15px 0;
-}
+
 
 
 
