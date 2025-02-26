@@ -9,6 +9,24 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+body[data-page="reglements"] .classe-D { color: orange; }
+body[data-page="reglements"] .FIM { color: violet; }
+body[data-page="reglements"] .UIU { color: blue; }
+body[data-page="reglements"] .Chaos { color: green; }
+body[data-page="reglements"] .Main-du-serpent { color: magenta; }
+body[data-page="reglements"] .Concierge { color: darkorange; }
+body[data-page="reglements"] .SCP-079 { color: red; }
+body[data-page="reglements"] .SCP { color: red; }
+body[data-page="reglements"] .instances { color: red; }
+body[data-page="reglements"] .Garde { color: #999999; }
+body[data-page="reglements"] .Androide { color: green; }
+body[data-page="reglements"] .Unite-tactique-robotique { color: blue; }
+body[data-page="reglements"] .Capitaine, 
+body[data-page="reglements"] .Represseur { color: violet; }
+body[data-page="reglements"] .Commandant-UIU { color: blue; }
+body[data-page="reglements"] .Scientifique { color: #f1c232; }
+body[data-page="reglements"] .Fondation { color: #a4c2f4; }
+
 
 #particles-js {
   position: fixed;
